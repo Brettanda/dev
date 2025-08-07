@@ -3,7 +3,7 @@
 git config --global user.email "brett@brett.brett"
 git config --global user.name "brett"
 
-sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify
+sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify hypridle
 sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols ttf-cascadia-code hyprlock
 
 #rm -rf ~/.config/hypr
