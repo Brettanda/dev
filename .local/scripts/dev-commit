@@ -1,0 +1,9 @@
+#~/usr/bin/env bash
+
+#include the same as below for any submodules when i add them
+
+pushd ~/personal/dev/
+git add .
+git commit -m 'auto commit'
+git push
+popd

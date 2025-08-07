@@ -1,5 +1,18 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+git config --global user.email "brett@brett.brett"
+git config --global user.name "brett"
+
+sudo pacman -S --noconfirm --needed firefox nwg-look ghostty
+sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols ttf-cascadia-code hyprlock
+
+rm -rf ~/.config/hypr
+rm -rf ~/.config/waybar
+rm -rf $HOME/.local
+rm $HOME/.bash_profile
 
 cp .config ~/ -r
+cp .local $HOME/.local -r
+cp .bash_profile $HOME/.bash_profile
 
 hyprctl reload
