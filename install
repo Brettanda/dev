@@ -3,16 +3,21 @@
 git config --global user.email "brett@brett.brett"
 git config --global user.name "brett"
 
-sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify hypridle
+sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify hypridle zsh
 sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols ttf-cascadia-code hyprlock
+sudo pacman -S --noconfirm --needed pulseaudio easyeffects
 
 #rm -rf ~/.config/hypr
 rm -rf ~/.config/waybar
 rm -rf $HOME/.local
 rm $HOME/.bash_profile
+rm $HOME/.zshrc
+rm $HOME/.zsh_profile
 
 cp .config ~/ -r
 cp .local $HOME/.local -r
 cp .bash_profile $HOME/.bash_profile
+cp .zshrc $HOME/.zshrc
+cp .zsh_profile $HOME/.zsh_profile
 
 hyprctl reload
