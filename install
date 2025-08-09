@@ -3,12 +3,22 @@
 git config --global user.email "brett@brett.brett"
 git config --global user.name "brett"
 
-sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock hyprpaper
-sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-nerd-fonts-symbols ttf-cascadia-code
-sudo pacman -S --noconfirm --needed pulseaudio easyeffects
+DISTRO="$(lsb_release -i | cut -f 2-)"
+# echo "$DISTRO"
 
-#rm -rf ~/.config/hypr
-rm -rf ~/.config/waybar
+if [ $DISTRO == "Arch" ]; then
+  sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock hyprpaper
+  sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-nerd-fonts-symbols ttf-cascadia-code
+  sudo pacman -S --noconfirm --needed pulseaudio easyeffects
+
+  #rm -rf ~/.config/hypr
+  rm -rf ~/.config/waybar
+fi
+
+if [ $DISTRO == "Mint" ]; then
+  sudo apt install ghostty zsh fzf -y
+fi
+
 rm -rf $HOME/.local/scripts
 rm $HOME/.bash_profile
 rm $HOME/.zshrc
@@ -22,4 +32,6 @@ cp .zshrc $HOME/.zshrc
 cp .zsh_profile $HOME/.zsh_profile
 cp .p10k.zsh $HOME/.p10k.zsh
 
-hyprctl reload
+if [ $DISTRO == "Arch" ]; then
+  hyprctl reload
+fi

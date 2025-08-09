@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-sudo pacman -S zsh --noconfirm
+DISTRO="$(lsb_release -i | cut -f 2-)"
+
+if [$DISTRO == "Arch"]; then
+  sudo pacman -S zsh --noconfirm
+elif [$DISTRO == "Mint]; then
+  sudo apt install zsh -y
+fi
 hash -r
 sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://install.ohmyz.sh/)"
