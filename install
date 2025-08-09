@@ -9,15 +9,17 @@ sudo pacman -S --noconfirm --needed pulseaudio easyeffects
 
 #rm -rf ~/.config/hypr
 rm -rf ~/.config/waybar
-rm -rf $HOME/.local
+rm -rf $HOME/.local/scripts
 rm $HOME/.bash_profile
 rm $HOME/.zshrc
 rm $HOME/.zsh_profile
+rm $HOME/.p10k.zsh
 
 cp .config ~/ -r
-cp .local $HOME/.local -r
+cp .local/scripts $HOME/.local/scripts -r
 cp .bash_profile $HOME/.bash_profile
 cp .zshrc $HOME/.zshrc
 cp .zsh_profile $HOME/.zsh_profile
+cp .p10k.zsh $HOME/.p10k.zsh
 
 hyprctl reload
