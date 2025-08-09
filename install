@@ -15,7 +15,7 @@ if [ $DISTRO == "Arch" ]; then
   rm -rf ~/.config/waybar
 fi
 
-if [ $DISTRO == "Mint" ]; then
+if [ $DISTRO == "Linuxmint" ]; then
   sudo apt install ghostty zsh fzf -y
 fi
 
