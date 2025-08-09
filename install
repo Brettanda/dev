@@ -3,7 +3,7 @@
 git config --global user.email "brett@brett.brett"
 git config --global user.name "brett"
 
-sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify hypridle zsh hyprlock hyprpaper
+sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock hyprpaper
 sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-nerd-fonts-symbols ttf-cascadia-code
 sudo pacman -S --noconfirm --needed pulseaudio easyeffects
 
