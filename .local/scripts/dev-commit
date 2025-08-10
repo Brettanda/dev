@@ -1,4 +1,4 @@
-#~/usr/bin/env bash
+#!/usr/bin/env bash
 
 DISTRO="$(lsb_release -i | cut -f 2-)"
 
@@ -7,9 +7,11 @@ DISTRO="$(lsb_release -i | cut -f 2-)"
 if [ $DISTRO == "Arch" ]; then
   pushd ~/personal/dev/
 fi
+
 git add .
 git commit -m 'auto commit'
 git push
+
 if [ $DISTRO == "Arch" ]; then
   popd
 fi
