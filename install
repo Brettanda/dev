@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-git config --global user.email "brett@brett.brett"
-git config --global user.name "brett"
+#git config --global user.email "brett@brett.brett"
+git config --global user.name "Brett Anda"
 
 DISTRO="$(lsb_release -i | cut -f 2-)"
 # echo "$DISTRO"
@@ -10,14 +10,17 @@ if [ $DISTRO == "Arch" ]; then
   sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock hyprpaper
   sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-nerd-fonts-symbols ttf-cascadia-code
   sudo pacman -S --noconfirm --needed pulseaudio easyeffects
-  sudo pacman -S --noconfirm --needed python-pywal
 
   #rm -rf ~/.config/hypr
   rm -rf ~/.config/waybar
 fi
 
 if [ $DISTRO == "Linuxmint" ]; then
-  sudo apt install ghostty zsh fzf -y
+  sudo mv /etc/apt/preferences.d/nosnap.pref /etc/apt/preferences.d/nosnap.backup
+  sudo apt update
+  sudo apt install snapd -y
+  snap install ghostty
+  sudo apt install fzf -y
 fi
 
 rm -rf $HOME/.local/scripts
