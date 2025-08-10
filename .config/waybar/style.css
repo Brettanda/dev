@@ -1,6 +1,27 @@
+//@import url('../../.cache/wal/colors-waybar.css');
+@define-color foreground {white};
+@define-color background {black};
+
+@define-color: color0 {red};
+@define-color: color1 {red};
+@define-color: color2 {red};
+@define-color: color3 {red};
+@define-color: color4 {red};
+@define-color: color5 {red};
+@define-color: color6 {red};
+@define-color: color7 {red};
+@define-color: color8 {red};
+@define-color: color9 {red};
+@define-color: color10 {red};
+@define-color: color11 {red};
+@define-color: color12 {red};
+@define-color: color13 {red};
+@define-color: color14 {red};
+@define-color: color15 {red};
+
 * {
-    font-size:14px;
-    font-family: "CodeNewRoman Nerd Font Propo";
+    font-size:15px;
+    font-family: "Cascadia Code", "CodeNewRoman Nerd Font Propo";
 }
 window#waybar{
     all:unset;
@@ -23,7 +44,7 @@ window#waybar{
     padding:7px;
     margin: 10 10 5 0;
     border-radius:10px;
-    background: alpha(@background,.6);
+    background: alpha(@background,.8);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
 }
 tooltip {
