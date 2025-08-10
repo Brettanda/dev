@@ -1,23 +1,26 @@
-//@import url('../../.cache/wal/colors-waybar.css');
-@define-color foreground {white};
-@define-color background {black};
+/* @import url('../../.cache/wal/colors-waybar.css'); */
 
-@define-color: color0 {red};
-@define-color: color1 {red};
-@define-color: color2 {red};
-@define-color: color3 {red};
-@define-color: color4 {red};
-@define-color: color5 {red};
-@define-color: color6 {red};
-@define-color: color7 {red};
-@define-color: color8 {red};
-@define-color: color9 {red};
-@define-color: color10 {red};
-@define-color: color11 {red};
-@define-color: color12 {red};
-@define-color: color13 {red};
-@define-color: color14 {red};
-@define-color: color15 {red};
+@define-color foreground #ebe3e1;
+@define-color background #392435;
+@define-color cursor #ebe3e1;
+
+@define-color color0 #392435;
+@define-color color1 #BA8986;
+@define-color color2 #AC9CA6;
+@define-color color3 #C18B86;
+@define-color color4 #D1B0AA;
+@define-color color5 #EFD99B;
+@define-color color6 #BBB9C8;
+@define-color color7 #ebe3e1;
+@define-color color8 #a49e9d;
+@define-color color9 #BA8986;
+@define-color color10 #AC9CA6;
+@define-color color11 #C18B86;
+@define-color color12 #D1B0AA;
+@define-color color13 #EFD99B;
+@define-color color14 #BBB9C8;
+@define-color color15 #ebe3e1;
+
 
 * {
     font-size:15px;
