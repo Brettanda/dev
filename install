@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-git config --global user.email "brett@brett.brett"
-git config --global user.name "brett"
+#git config --global user.email "brett@brett.brett"
+git config --global user.name "Brett Anda"
 
 DISTRO="$(lsb_release -i | cut -f 2-)"
 # echo "$DISTRO"
 
+# The spaces are required?!??!?!?!??!?
 if [ $DISTRO == "Arch" ]; then
   sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock hyprpaper
   sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-nerd-fonts-symbols ttf-cascadia-code
@@ -16,21 +17,52 @@ if [ $DISTRO == "Arch" ]; then
 fi
 
 if [ $DISTRO == "Linuxmint" ]; then
-  sudo apt install ghostty zsh fzf -y
+  # fuck off, why do i need snapd for zig
+  # source https://linuxcapable.com/how-to-install-and-enable-snap-on-linux-mint/
+  # probably shouldn't have deleted the file already, b/c i can't restore it now :|
+  sudo mv /etc/apt/preferences.d/nosnap.pref /etc/apt/preferences.d/nosnap.backup
+  sudo apt update
+  sudo apt install zsh llvm liblld-dev clang libclang-dev snapd -y
+  sudo systemctl enable --now snapd.service
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
+  #if ! type "zig" > /dev/null; then
+    #sudo apt install -y snap
+    #sudo systemctl enable --now snapd.service
+    #snap install ghostty --classic --beta
+    #sudo apt remove snapd -y
+    #wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz -P $HOME/Downloads -nc
+    #tar xf $HOME/Downloads/zig-linux-x86_64-0.13.0.tar.xz -C ~/Downloads/
+    #git clone -b 0.14.x https://github.com/ziglang/zig $HOME/Downloads/zig
+    #cd $HOME/Downloads/zig
+    #mkdir build
+    #cd build
+    #cmake ..
+    #make install
+  #fi
+  if ! type "ghostty" > /dev/null; then
+    snap install ghostty --classic --beta
+  fi
+  sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /snap/bin/ghostty 50
+  #git clone https://github.com/ghostty-org/ghostty $HOME/Downloads/ghostty
+  #cd $HOME/Downloads/ghostty
+  #zig build -Doptimize=ReleaseFast
 fi
 
 rm -rf $HOME/.local/scripts
 rm $HOME/.bash_profile
+rm $HOME/.bashrc
 rm $HOME/.zshrc
 rm $HOME/.zsh_profile
 rm $HOME/.p10k.zsh
 
-cp .config ~/ -r
-cp .local/scripts $HOME/.local/scripts -r
-cp .bash_profile $HOME/.bash_profile
-cp .zshrc $HOME/.zshrc
-cp .zsh_profile $HOME/.zsh_profile
-cp .p10k.zsh $HOME/.p10k.zsh
+cp $HOME/personal/dev/.config ~/ -r
+cp $HOME/personal/dev/.local/scripts $HOME/.local/scripts -r
+cp $HOME/personal/dev/.bash_profile $HOME/.bash_profile
+cp $HOME/personal/dev/.bashrc $HOME/.bashrc
+cp $HOME/personal/dev/.zshrc $HOME/.zshrc
+cp $HOME/personal/dev/.zsh_profile $HOME/.zsh_profile
+cp $HOME/personal/dev/.p10k.zsh $HOME/.p10k.zsh
 
 if [ $DISTRO == "Arch" ]; then
   hyprctl reload

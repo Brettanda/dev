@@ -161,3 +161,4 @@ alias cls='clear'
 
 # Shell integrations
 eval "$(fzf --zsh)"
+#source <(fzf --zsh)

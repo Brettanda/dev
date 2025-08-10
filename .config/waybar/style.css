@@ -1,6 +1,30 @@
+/* @import url('../../.cache/wal/colors-waybar.css'); */
+
+@define-color foreground #ebe3e1;
+@define-color background #392435;
+@define-color cursor #ebe3e1;
+
+@define-color color0 #392435;
+@define-color color1 #BA8986;
+@define-color color2 #AC9CA6;
+@define-color color3 #C18B86;
+@define-color color4 #D1B0AA;
+@define-color color5 #EFD99B;
+@define-color color6 #BBB9C8;
+@define-color color7 #ebe3e1;
+@define-color color8 #a49e9d;
+@define-color color9 #BA8986;
+@define-color color10 #AC9CA6;
+@define-color color11 #C18B86;
+@define-color color12 #D1B0AA;
+@define-color color13 #EFD99B;
+@define-color color14 #BBB9C8;
+@define-color color15 #ebe3e1;
+
+
 * {
-    font-size:14px;
-    font-family: "CodeNewRoman Nerd Font Propo";
+    font-size:15px;
+    font-family: "Cascadia Code", "CodeNewRoman Nerd Font Propo";
 }
 window#waybar{
     all:unset;
@@ -23,7 +47,7 @@ window#waybar{
     padding:7px;
     margin: 10 10 5 0;
     border-radius:10px;
-    background: alpha(@background,.6);
+    background: alpha(@background,.8);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
 }
 tooltip {
