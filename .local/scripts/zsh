@@ -9,4 +9,4 @@ elif [$DISTRO == "Mint]; then
 fi
 hash -r
 sudo chsh -s $(which zsh)
-sh -c "$(curl -fsSL https://install.ohmyz.sh/)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
