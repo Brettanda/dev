@@ -1,9 +1,15 @@
 #~/usr/bin/env bash
 
+DISTRO="$(lsb_release -i | cut -f 2-)"
+
 #include the same as below for any submodules when i add them
 
-pushd ~/personal/dev/
+if [ $DISTRO == "Arch" ]; then
+  pushd ~/personal/dev/
+fi
 git add .
 git commit -m 'auto commit'
 git push
-popd
+if [ $DISTRO == "Arch" ]; then
+  popd
+fi
