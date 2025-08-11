@@ -160,5 +160,6 @@ alias ls='ls --color'
 alias cls='clear'
 
 # Shell integrations
-eval "$(fzf --zsh)"
+#eval "$(fzf --zsh)"
 #source <(fzf --zsh)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

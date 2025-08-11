@@ -64,7 +64,7 @@ cp $HOME/personal/dev/.local/scripts $HOME/.local/scripts -r
 cp $HOME/personal/dev/.bash_profile $HOME/.bash_profile
 cp $HOME/personal/dev/.bashrc $HOME/.bashrc
 cp $HOME/personal/dev/.zshrc $HOME/.zshrc
-#cp $HOME/personal/dev/.zsh_profile $HOME/.zsh_profile
+cp $HOME/personal/dev/.zsh_profile $HOME/.zsh_profile
 cp $HOME/personal/dev/.zshenv $HOME/.zshenv
 cp $HOME/personal/dev/.p10k.zsh $HOME/.p10k.zsh
 
