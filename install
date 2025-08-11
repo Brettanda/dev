@@ -14,6 +14,9 @@ if [ $DISTRO == "Arch" ]; then
 
   #rm -rf ~/.config/hypr
   rm -rf ~/.config/waybar
+
+  wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-x64" -O ~/Downloads/code-stable-x64.tar.gz -nc
+  
 fi
 
 if [ $DISTRO == "Linuxmint" ]; then
