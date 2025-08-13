@@ -1,0 +1,45 @@
+#!/bin/bash
+
+DELETE_AFTER=false
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --delete)
+            DELETE_AFTER=true
+            shift
+            ;;
+        *)
+            PARENT="${1%/}"
+            shift
+            ;;
+    esac
+done
+
+# Check if parent directory is set
+if [ -z "$PARENT" ]; then
+    echo "Usage: $0 <parent-directory> [--delete]"
+    exit 1
+fi
+
+# Check if the parent directory exists
+if [ ! -d "$PARENT" ]; then
+    echo "Error: '$PARENT' is not a valid directory."
+    exit 1
+fi
+
+# Loop through each subdirectory
+for DIR in "$PARENT"/*/; do
+    [ -d "$DIR" ] || continue
+
+    BASENAME=$(basename "$DIR")
+    echo "Compressing $DIR to ${BASENAME}.zip..."
+    zip -r "${PARENT}/${BASENAME}.zip" "$DIR"
+
+    if [ "$DELETE_AFTER" = true ]; then
+        echo "Deleting $DIR..."
+        rm -rf "$DIR"
+    fi
+done
+
+echo "Done."

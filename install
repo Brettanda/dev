@@ -8,7 +8,7 @@ DISTRO="$(lsb_release -i | cut -f 2-)"
 
 # The spaces are required?!??!?!?!??!?
 if [ $DISTRO == "Arch" ]; then
-  sudo pacman -S --noconfirm --needed firefox nwg-look ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock hyprpaper
+  sudo pacman -S --noconfirm --needed librewolf nwg-look ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock hyprpaper
   sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-nerd-fonts-symbols ttf-cascadia-code
   sudo pacman -S --noconfirm --needed pulseaudio easyeffects
 
@@ -46,6 +46,7 @@ if [ $DISTRO == "Linuxmint" ]; then
     #cmake ..
     #make install
   #fi
+  sudo apt install extrepo -y && sudo extrepo enable librewolf && sudo apt update && sudo apt install librewolf -y
   if ! type "ghostty" > /dev/null; then
     snap install ghostty --classic --beta
   fi

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Check if an argument is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <directory>"
+    exit 1
+fi
+
+# Remove trailing slash from the input directory (if any)
+DIR="${1%/}"
+
+# Check if the directory exists
+if [ ! -d "$DIR" ]; then
+    echo "Error: '$DIR' is not a valid directory."
+    exit 1
+fi
+
+# Get the base name of the directory
+BASENAME=$(basename "$DIR")
+
+# Compress the directory into a zip file with the same name
+zip -r "${BASENAME}.zip" "$DIR"
+
+echo "Created ${BASENAME}.zip successfully."
