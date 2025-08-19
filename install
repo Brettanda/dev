@@ -56,6 +56,15 @@ if [ $DISTRO == "Linuxmint" ]; then
   #zig build -Doptimize=ReleaseFast
 fi
 
+if ! type "anki" > /dev/null; then
+	cd ~/Downloads
+	wget -nc https://github.com/ankitects/anki/releases/download/25.07.5/anki-launcher-25.07.5-linux.tar.zst
+	tar xaf anki-launcher-25.07.5-linux.tar.zst
+	cd anki-launcher-25.07.5-linux
+	sudo ./install.sh
+fi
+
+
 rm -rf $HOME/.local/scripts
 rm $HOME/.bash_profile
 rm $HOME/.bashrc
