@@ -46,7 +46,14 @@ if [ $DISTRO == "Linuxmint" ]; then
     #cmake ..
     #make install
   #fi
+
+  #install libre wolf
   sudo apt install extrepo -y && sudo extrepo enable librewolf && sudo apt update && sudo apt install librewolf -y
+
+  # install nvm
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+
   if ! type "ghostty" > /dev/null; then
     snap install ghostty --classic --beta
   fi
