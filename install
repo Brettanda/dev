@@ -16,7 +16,7 @@ if [ $DISTRO == "Arch" ]; then
   rm -rf ~/.config/waybar
 
   #wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-x64" -O ~/Downloads/code-stable-x64.tar.gz -nc
-  yay -S visual-studio-code-bin --noconfirm
+  yay -S visual-studio-code-bin --noconfirm --needed
   
 fi
 
