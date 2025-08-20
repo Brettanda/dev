@@ -4,7 +4,7 @@ background-blur = false
 confirm-close-surface=false
 shell-integration=zsh
 shell-integration-features = no-cursor,no-sudo,title
-font-family=Cascadia Code
+font-family=Cascadia Code Regular 11
 theme = rose-pine
 theme = matugen
 #,rose-pine

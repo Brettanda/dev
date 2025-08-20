@@ -7,14 +7,14 @@ configuration {
 	display-window: "Windows";
 	display-run: "Run";
 	drun-display-format: "{icon} {name}";
-	font: "Cascadia Code";
+	font: "Cascadia Code Regular 11";
 	show-icons: true;
 	icon-theme: "Colloid";
 }
 
 window {
     /* properties for window widget */
-    transparency:                "real";
+    transparency:                "screenshot";
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
