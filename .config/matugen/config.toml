@@ -12,3 +12,5 @@ post_hook = 'pkill -SIGUSR2 waybar'
 [templates.ghostty]
 input_path = './templates/ghostty'
 output_path = "~/.config/ghostty/themes/matugen"
+# There isn't a way to reload this damn config without just using ctrl+shit+, (until the next release (maybe))
+#post_hook = "kill -SIGUSR2 $(pidof ghostty)"
