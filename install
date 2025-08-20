@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #git config --global user.email "brett@brett.brett"
-git config --global user.name "Brett Anda"
+#git config --global user.name "Brett Anda"
 
 DISTRO="$(lsb_release -i | cut -f 2-)"
 # echo "$DISTRO"
@@ -10,7 +10,7 @@ DISTRO="$(lsb_release -i | cut -f 2-)"
 if [ $DISTRO == "Arch" ]; then
   sudo pacman -S --noconfirm --needed librewolf nwg-look ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock hyprpaper xdg-desktop-portal-gtk xdg-desktop-portal-hyprland gnome-keyring seahorse swww
   sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-nerd-fonts-symbols ttf-cascadia-code
-  sudo pacman -S --noconfirm --needed pulseaudio easyeffects
+  sudo pacman -S --noconfirm --needed pulseaudio
 
   #rm -rf ~/.config/hypr
   rm -rf ~/.config/waybar
@@ -21,6 +21,8 @@ if [ $DISTRO == "Arch" ]; then
 fi
 
 if [ $DISTRO == "Linuxmint" ]; then
+  sudo apt install pulseaudio -y
+
   # fuck off, why do i need snapd for zig
   # source https://linuxcapable.com/how-to-install-and-enable-snap-on-linux-mint/
   # probably shouldn't have deleted the file already, b/c i can't restore it now :|
@@ -79,6 +81,7 @@ rm $HOME/.zshrc
 rm $HOME/.zsh_profile
 rm $HOME/.zshenv
 rm $HOME/.p10k.zsh
+#rm /etc/pulse/default.pa
 
 cp $HOME/personal/dev/.config ~/ -r
 cp $HOME/personal/dev/.local/scripts $HOME/.local/scripts -r
@@ -88,6 +91,7 @@ cp $HOME/personal/dev/.zshrc $HOME/.zshrc
 cp $HOME/personal/dev/.zsh_profile $HOME/.zsh_profile
 cp $HOME/personal/dev/.zshenv $HOME/.zshenv
 cp $HOME/personal/dev/.p10k.zsh $HOME/.p10k.zsh
+#cp $HOME/personal/dev/etc/pulse/default.pa /etc/pulse/default.pa
 
 if [ $DISTRO == "Arch" ]; then
   hyprctl reload
