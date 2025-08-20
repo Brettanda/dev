@@ -18,3 +18,7 @@ input_path = './templates/ghostty'
 output_path = "~/.config/ghostty/themes/matugen"
 # There isn't a way to reload this damn config without just using ctrl+shit+, (until the next release (maybe))
 #post_hook = "kill -SIGUSR2 $(pidof ghostty)"
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
