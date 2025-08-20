@@ -1,11 +1,12 @@
-background = 000000
+#background = 000000
 background-opacity = 0.9
 background-blur = false
 confirm-close-surface=false
 shell-integration=zsh
 shell-integration-features = no-cursor,no-sudo,title
 font-family=Cascadia Code
-theme = rose-pine
+theme = matugen
+#,rose-pine
 
 # Disable Ctrl+Enter fullscreen keybind
 keybind = ctrl+enter=unbind

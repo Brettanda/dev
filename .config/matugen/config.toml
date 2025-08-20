@@ -8,3 +8,7 @@ set = true
 input_path = './templates/colors.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.ghostty]
+input_path = './templates/ghostty'
+output_path = "~/.config/ghostty/themes/matugen"
