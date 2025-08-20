@@ -83,8 +83,8 @@ rm $HOME/.zsh_profile
 rm $HOME/.zshenv
 rm $HOME/.p10k.zsh
 #rm /etc/pulse/default.pa
-systemctl --user stop swww.service
-systemctl --user disable swww.service
+#systemctl --user stop swww.service
+#systemctl --user disable swww.service
 
 cp $HOME/personal/dev/.config ~/ -r
 cp $HOME/personal/dev/Wallpapers ~/ -r
@@ -96,8 +96,8 @@ cp $HOME/personal/dev/.zsh_profile $HOME/.zsh_profile
 cp $HOME/personal/dev/.zshenv $HOME/.zshenv
 cp $HOME/personal/dev/.p10k.zsh $HOME/.p10k.zsh
 #cp $HOME/personal/dev/etc/pulse/default.pa /etc/pulse/default.pa
-systemctl --user enable swww.service
-systemctl --user start swww.service
+#systemctl --user enable swww.service
+#systemctl --user start swww.service
 
 if [ $DISTRO == "Arch" ]; then
   hyprctl reload
