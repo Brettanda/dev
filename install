@@ -85,6 +85,12 @@ rm $HOME/.p10k.zsh
 #rm /etc/pulse/default.pa
 #systemctl --user stop swww.service
 #systemctl --user disable swww.service
+if [ $DISTRO == "Linuxmint" ]; then
+	if ! test -d $HOME/.config/ghostty/themes; then
+		mkdir $HOME/.config/ghostty/themes
+	fi
+	cp $HOME/.config/ghostty/themes.matugen.mint $HOME/.config/ghostty/themes/matugen
+fi
 
 cp $HOME/personal/dev/.config ~/ -r
 cp $HOME/personal/dev/Wallpapers ~/ -r
