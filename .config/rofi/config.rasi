@@ -2,7 +2,7 @@
 @import "colors.rasi"
 
 configuration {
-	modi: "window,run,drun";
+	modi: "run,drun";
 	display-drun: "Applications";
 	display-window: "Windows";
 	display-run: "Run";
