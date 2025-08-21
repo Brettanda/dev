@@ -13,7 +13,7 @@ if [ $DISTRO == "Arch" ]; then
   #rm -rf ~/.config/hypr
   rm -rf ~/.config/waybar
 
-  yay -S visual-studio-code-bin matugen-bin aurutils --noconfirm --needed
+  yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib --noconfirm --needed
   
 fi
 
