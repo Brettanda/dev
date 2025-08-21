@@ -13,7 +13,7 @@ if [ $DISTRO == "Arch" ]; then
   #rm -rf ~/.config/hypr
   rm -rf ~/.config/waybar
 
-  yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox --noconfirm --needed
+  yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg --noconfirm --needed
 fi
 
 if [ $DISTRO == "Linuxmint" ]; then

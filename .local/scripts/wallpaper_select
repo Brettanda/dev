@@ -8,7 +8,12 @@ wallpapers_dir="$HOME/Wallpapers"
 
 selected_wallpaper=$(for a in "$wallpapers_dir"/*; do
     echo -en "$(basename "${a%.*}")\0icon\x1f$a\n"
-done | rofi -dmenu -p " ")
+done | rofi -dmenu -theme wallpaperselect.rasi -p " ")
+#done | rofi -dmenu -theme wallpaperselect.rasi -p " ")
+
+
+
+#pkill rofi || true && rofi -show drun -theme ${style_dir}/${style_theme}.rasi
 
 image_fullname_path=$(find "$wallpapers_dir" -type f -name "$selected_wallpaper.*" | head -n 1)
 
