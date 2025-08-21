@@ -109,4 +109,5 @@ cp $HOME/personal/dev/.p10k.zsh $HOME/.p10k.zsh
 
 if [ $DISTRO == "Arch" ]; then
   hyprctl reload
+  matugen image $HOME/.config/hypr/current_wallpaper
 fi

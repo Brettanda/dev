@@ -14,7 +14,8 @@ post_hook = 'hyprctl reload'
 [templates.waybar]
 input_path = './templates/colors.css'
 output_path = '~/.config/waybar/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar'
+# it's updating without the below hook
+#post_hook = 'pkill -SIGUSR2 waybar'
 
 [templates.ghostty]
 input_path = './templates/ghostty'
