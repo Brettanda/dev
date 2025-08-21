@@ -26,8 +26,8 @@ if [ $DISTRO == "Linuxmint" ]; then
   sudo apt update
   sudo apt install zsh llvm liblld-dev clang libclang-dev snapd -y
   sudo systemctl enable --now snapd.service
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  if ! type "fzf" > /dev/null; then
+  if ! [ -d "${HOME}/.fzf" ]; then
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
   fi
   #if ! type "zig" > /dev/null; then
