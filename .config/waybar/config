@@ -5,8 +5,6 @@
         "modules-left": ["custom/notification","clock","custom/pacman","tray"],
         "modules-center": ["hyprland/workspaces"],
         "modules-right": ["group/expand","bluetooth","network","battery","custom/lock"],
-
-
         "hyprland/workspaces": {
             "format": "{icon}",
             "format-icons": {
