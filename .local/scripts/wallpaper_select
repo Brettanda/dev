@@ -22,3 +22,6 @@ matugen image "$image_fullname_path"
 
 #~/.config/viegphunt/wallpaper_effects.sh
 ln -sf "$image_fullname_path" "$HOME/.config/hypr/current_wallpaper"
+
+
+# Maybe implement this at some point https://github.com/Abhra00/Matuprland/blob/main/hypr/scripts/wallSelect.sh
