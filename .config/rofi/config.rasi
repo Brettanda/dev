@@ -2,13 +2,13 @@
 @import "colors.rasi"
 
 configuration {
-	modi: "run,drun,search:/home/brett/.local/scripts/rofi-web-search.py";
-	combi-modes: [drun];
+	modi: "run,drun,search:/home/brett/.local/scripts/rofi-web-search.sh";
+	/*combi-modi: [drun,run,search];*/
 	display-drun: "Applications";
 	display-window: "Windows";
 	display-run: "Run";
         display-search: "Duckduckgo";
-	display-comib: "Search";
+	display-combi: "Search Everything";
 	drun-display-format: "{icon} {name}";
 	font: "Cascadia Code Regular 11";
 	show-icons: true;
