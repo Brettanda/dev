@@ -8,11 +8,11 @@
         "hyprland/workspaces": {
             "format": "{icon}",
 	    "format-icons": ["一","二","三","四","五"],
-#            "format-icons": {
-#                "active": "",
-#                "default": "",
-#                "empty": ""
-#            },
+//           "format-icons": {
+//               "active": "",
+//               "default": "",
+//               "empty": ""
+//           },
             "persistent-workspaces": {
                 "*": [ 1,2,3,4,5 ]
             }
