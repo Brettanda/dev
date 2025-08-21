@@ -6,6 +6,9 @@
         "modules-center": ["hyprland/workspaces"],
         "modules-right": ["group/expand","bluetooth","network","battery","custom/lock"],
         "hyprland/workspaces": {
+            "disable-scroll": true,
+	    "show-special": false,
+	    "all-outputs": true,
             "format": "{icon}",
 	    "format-icons": {
 		"1": "一",
@@ -17,8 +20,8 @@
 		"7": "七",
 		"8": "八",
 		"9": "九",
-		"10": "十",
-            },
+		"10": "十"
+	    },
             "persistent-workspaces": {
                 "*": 5
             }
