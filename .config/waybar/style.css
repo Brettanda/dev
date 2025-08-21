@@ -1,7 +1,7 @@
 @import "colors.css";
 /* @import url('../../.cache/wal/colors-waybar.css'); */
 
-@define-color foreground #ebe3e1;
+/*@define-color foreground #ebe3e1;
 @define-color background #392435;
 @define-color cursor #ebe3e1;
 
@@ -21,6 +21,7 @@
 @define-color color13 #EFD99B;
 @define-color color14 #BBB9C8;
 @define-color color15 #ebe3e1;
+*/
 
 
 * {
