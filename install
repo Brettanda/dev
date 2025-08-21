@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+git config --global core.editor "nvim"
+
 DISTRO="$(lsb_release -i | cut -f 2-)"
 
 # The spaces are required?!??!?!?!??!?
