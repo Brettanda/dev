@@ -80,6 +80,7 @@ tooltip {
     padding: 0px 5px;
 }
 #workspaces button {
+    font-size:20px;
     all:unset;
     padding: 0px 5px;
     color: alpha(@color9,.4);
