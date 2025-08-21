@@ -26,54 +26,43 @@
 
 * {
     font-size:15px;
-    font-family: "Cascadia Code", "CodeNewRoman Nerd Font Propo";
+    font-family: "CaskaydiaCove Nerd Font Propo", "Cascadia Code NF", "CodeNewRoman Nerd Font Propo", sans-serif;
+    min-height:0;
 }
-window#waybar{
-    all:unset;
+#waybar {
+	all:unset;
 }
-.modules-left {
+.modules-left,
+.modules-center,
+.modules-right{
     padding:7px;
-    margin:10 0 5 10;
+    margin:5px;
     border-radius:10px;
     background: alpha(@background,.6);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-}
-.modules-center {
-    padding:7px;
-    margin:10 0 5 0;
-    border-radius:10px;
-    background: alpha(@background,.6);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-}
-.modules-right {
-    padding:7px;
-    margin: 10 10 5 0;
-    border-radius:10px;
-    background: alpha(@background,.8);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
 }
 tooltip {
     background:@background;
-    color: @color7;
+    color: @on-background;
 }
 #clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
     transition: all .3s ease;
-    color:@color9;
+    color:@primary;
 }
 #custom-notification {
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
+    color:@on-background;
 }
 #clock{
     padding: 0px 5px;
-    color:@color7;
+    color:@on-background;
     transition: all .3s ease;
 }
 #custom-pacman{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
+    color:@on-background;
 
 }
 #workspaces {
@@ -83,7 +72,7 @@ tooltip {
     font-size:20px;
     all:unset;
     padding: 0px 5px;
-    color: alpha(@color9,.4);
+    color: alpha(@primary,.4);
     transition: all .2s ease;
 }
 #workspaces button:hover {
@@ -93,7 +82,7 @@ tooltip {
     transition: all 1s ease;
 }
 #workspaces button.active {
-    color: @color9;
+    color: @primary;
     border: none;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
@@ -109,28 +98,25 @@ tooltip {
     transition: all 1s ease;
 }
 #workspaces button.empty.active {
-    color: @color9;
+    color: @primary;
     border: none;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
 #bluetooth{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
-
+    color:@on-background;
 }
 #network{
+    min-width: 0;
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
-
+    color:@on-background;
 }
 #battery{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
-
-
+    color:@on-background;
 }
 #battery.charging {
     color: #26A65B;
@@ -166,9 +152,10 @@ tooltip {
     padding: 0px 5px;
 }
 #cpu,#memory,#temperature{
+    font-size: 20px;
     padding: 0px 5px;
     transition: all .3s ease; 
-    color:@color7;
+    color:@on-background;
 
 }
 #custom-endpoint{
