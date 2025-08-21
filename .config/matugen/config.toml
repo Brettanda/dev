@@ -25,3 +25,33 @@ output_path = "~/.config/ghostty/themes/matugen"
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi-colors.rasi'
 output_path = '~/.config/rofi/colors.rasi'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/templates/hyprlock-colors.conf'
+output_path = '~/.config/hypr/hyprlock-colors.conf'
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/swaync-colors.css'
+output_path = '~/.config/swaync/swaync-colors.css'
+post_hook = 'swaync-client -rs'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.qt5]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt5ct/colors/qt5ct-colors.conf'
+
+[templates.qt6]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt6ct/colors/qt6ct-colors.conf'
+
+[templates.pywalfox]
+input_path = '~/.config/matugen/templates/pywalfox-colors.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update'
