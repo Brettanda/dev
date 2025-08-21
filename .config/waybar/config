@@ -76,6 +76,7 @@
             },
             "format": "{time} {icon}",
             "format-charging": "{capacity}% 󰂄",
+	    "format-full": "{icon}",
             "format-plugged": "{capacity}% 󰂄 ",
             "format-alt": "{time} {icon}",
             "format-icons": ["󰁻","󰁼","󰁾","󰂀","󰂂","󰁹"],
