@@ -35,13 +35,13 @@ input_path = '~/.config/matugen/templates/swaync-colors.css'
 output_path = '~/.config/swaync/swaync-colors.css'
 post_hook = 'swaync-client -rs'
 
-[templates.gtk3]
-input_path = '~/.config/matugen/templates/gtk.css'
-output_path = '~/.config/gtk-3.0/gtk.css'
+#[templates.gtk3]
+#input_path = '~/.config/matugen/templates/gtk.css'
+#output_path = '~/.config/gtk-3.0/gtk.css'
 
-[templates.gtk4]
-input_path = '~/.config/matugen/templates/gtk.css'
-output_path = '~/.config/gtk-4.0/gtk.css'
+#[templates.gtk4]
+#input_path = '~/.config/matugen/templates/gtk.css'
+#output_path = '~/.config/gtk-4.0/gtk.css'
 
 [templates.qt5]
 input_path = '~/.config/matugen/templates/qtct-colors.conf'
