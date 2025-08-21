@@ -14,6 +14,9 @@ if [ $DISTRO == "Arch" ]; then
   rm -rf ~/.config/waybar
 
   yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib --noconfirm --needed
+
+  wget https://raw.githubusercontent.com/GilOliveira/rofi-web-search/refs/heads/master/rofi-web-search.py -P $HOME/.local/scripts/ -nc
+  chmod +x $HOME/.local/scripts/rofi-web-search.py
   
 fi
 
