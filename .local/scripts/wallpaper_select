@@ -4,7 +4,7 @@ if pidof rofi > /dev/null; then
     pkill rofi
 fi
 
-wallpapers_dir="$HOME/Pictures/Wallpapers"
+wallpapers_dir="$HOME/Wallpapers"
 
 selected_wallpaper=$(for a in "$wallpapers_dir"/*; do
     echo -en "$(basename "${a%.*}")\0icon\x1f$a\n"
