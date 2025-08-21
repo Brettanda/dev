@@ -15,8 +15,8 @@ if [ $DISTRO == "Arch" ]; then
 
   yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib --noconfirm --needed
 
-  wget https://raw.githubusercontent.com/GilOliveira/rofi-web-search/refs/heads/master/rofi-web-search.py -P $HOME/.local/scripts/ -nc
-  chmod +x $HOME/.local/scripts/rofi-web-search.py
+  wget https://raw.githubusercontent.com/GilOliveira/rofi-web-search/refs/heads/master/rofi-web-search.py -P $HOME/personal/dev/.local/scripts/ -nc
+  chmod +x $HOME/personal/dev/.local/scripts/rofi-web-search.py
   
 fi
 
