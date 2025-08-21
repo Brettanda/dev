@@ -79,8 +79,8 @@
         },
         "custom/pacman": {
             "format": "󰅢 {}",
-            "interval": 30,   
-            "exec": "checkupdates | wc -l",
+            "interval": 3600,   
+            "exec": "updatecheck | wc -l",
             "exec-if": "exit 0",
             "on-click": "ghostty -e sh -c 'yay -Syu --noconfirm --needed; read'; pkill -SIGRTMIN+8 waybar",
             "signal": 8,
