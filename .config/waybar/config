@@ -7,19 +7,20 @@
         "modules-right": ["group/expand","bluetooth","network","battery","custom/lock"],
         "hyprland/workspaces": {
             "format": "{icon}",
-"format-icons": {
-      "active": "󰮯",
-      "default": "󰊠",
-      "special": "S"
-    },
-//	    "format-icons": ["一","二","三","四","五"],
-//           "format-icons": {
-//               "active": "",
-//               "default": "",
-//               "empty": ""
-//           },
+	    "format-icons": {
+		"1": "一",
+		"2": "二",
+		"3": "三",
+		"4": "四",
+		"5": "五",
+		"6": "六",
+		"7": "七",
+		"8": "八",
+		"9": "九",
+		"10": "十",
+            }
             "persistent-workspaces": {
-                "*": [ 1,2,3,4,5 ]
+                "*": 5
             }
         },
         "custom/notification": {
