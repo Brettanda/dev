@@ -1,9 +1,9 @@
-[config]
-reload_apps = true
+#[config]
+#reload_apps = true
 
 [config.wallpaper]
 command = "swww"
-arguments = ["img", "--transition-type", "center"]
+arguments = ["img", "--transition-type", "any"]
 set = true
 
 [templates.hyprland]
@@ -21,7 +21,8 @@ output_path = '~/.config/waybar/colors.css'
 input_path = './templates/ghostty'
 output_path = "~/.config/ghostty/themes/matugen"
 # There isn't a way to reload this damn config without just using ctrl+shit+, (until the next release (maybe))
-#post_hook = "kill -SIGUSR2 $(pidof ghostty)"
+post_hook = "ghostty_reload"
+#post_hook = "pkill -SIGUSR2 $(pidof ghostty)"
 
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi-colors.rasi'
