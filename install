@@ -6,7 +6,7 @@ DISTRO="$(lsb_release -i | cut -f 2-)"
 
 # The spaces are required?!??!?!?!??!?
 if [ $DISTRO == "Arch" ]; then
-  sudo pacman -S --noconfirm --needed nwg-look nwg-displays ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock xdg-desktop-portal-gtk xdg-desktop-portal-hyprland gnome-keyring seahorse swww cliphist brightnessctl 
+  sudo pacman -S --noconfirm --needed nwg-look nwg-displays ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock xdg-desktop-portal-gtk xdg-desktop-portal-hyprland gnome-keyring seahorse swww cliphist brightnessctl neovim
   sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-nerd-fonts-symbols ttf-cascadia-code ttf-cascadia-code-nerd adobe-source-han-sans-jp-fonts otf-ipafont noto-fonts-cjk
   sudo pacman -S --noconfirm --needed pulseaudio
 
