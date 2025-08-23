@@ -17,7 +17,7 @@ if [ $DISTRO == "Arch" ]; then
 fi
 
 if [ $DISTRO == "Linuxmint" ]; then
-  sudo apt install pulseaudio -y
+  sudo apt install pulseaudio rofi -y
 
   # fuck off, why do i need snapd for zig
   # source https://linuxcapable.com/how-to-install-and-enable-snap-on-linux-mint/
