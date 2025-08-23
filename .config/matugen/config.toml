@@ -1,13 +1,13 @@
-[config]
-reload_apps = true
+#[config]
+#reload_apps = true
 
 [config.wallpaper]
 command = "swww"
-arguments = ["img", "--transition-type", "center"]
+arguments = ["img", "--transition-type", "any"]
 set = true
 
 [templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+input_path = './templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
 post_hook = 'hyprctl reload'
 
@@ -17,22 +17,27 @@ output_path = '~/.config/waybar/colors.css'
 # it's updating without the below hook
 #post_hook = 'pkill -SIGUSR2 waybar'
 
+[templates.spicetify]
+input_path = './templates/spotify-colors.ini'
+output_path = '~/.config/spicetify/Themes/Brett/color.ini'
+
 [templates.ghostty]
 input_path = './templates/ghostty'
 output_path = "~/.config/ghostty/themes/matugen"
 # There isn't a way to reload this damn config without just using ctrl+shit+, (until the next release (maybe))
-#post_hook = "kill -SIGUSR2 $(pidof ghostty)"
+post_hook = "ghostty_reload"
+#post_hook = "pkill -SIGUSR2 $(pidof ghostty)"
 
 [templates.rofi]
-input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+input_path = './templates/rofi-colors.rasi'
 output_path = '~/.config/rofi/colors.rasi'
 
 [templates.hyprlock]
-input_path = '~/.config/matugen/templates/hyprlock-colors.conf'
+input_path = './templates/hyprlock-colors.conf'
 output_path = '~/.config/hypr/hyprlock-colors.conf'
 
 [templates.swaync]
-input_path = '~/.config/matugen/templates/swaync-colors.css'
+input_path = './templates/swaync-colors.css'
 output_path = '~/.config/swaync/swaync-colors.css'
 post_hook = 'swaync-client -rs'
 
