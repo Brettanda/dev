@@ -2,7 +2,7 @@
 @import "colors.rasi"
 
 configuration {
-	modi: "run,drun,search:/home/brett/.local/scripts/rofi-web-search.sh";
+	modi: "run,drun,ssh,search:/home/brett/.local/scripts/rofi-web-search.sh";
 	/*combi-modi: [drun,run,search];*/
 	display-drun: "Applications";
 	display-window: "Windows";
