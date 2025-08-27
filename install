@@ -37,32 +37,26 @@ if [ $DISTRO == "Linuxmint" ]; then
     ~/.fzf/install
   fi
   #if ! type "zig" > /dev/null; then
-    #sudo apt install -y snap
-    #sudo systemctl enable --now snapd.service
-    #snap install ghostty --classic --beta
-    #sudo apt remove snapd -y
-    #wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz -P $HOME/Downloads -nc
-    #tar xf $HOME/Downloads/zig-linux-x86_64-0.13.0.tar.xz -C ~/Downloads/
-    #git clone -b 0.14.x https://github.com/ziglang/zig $HOME/Downloads/zig
-    #cd $HOME/Downloads/zig
-    #mkdir build
-    #cd build
-    #cmake ..
-    #make install
+  #sudo apt install -y snap
+  #sudo systemctl enable --now snapd.service
+  #snap install ghostty --classic --beta
+  #sudo apt remove snapd -y
+  #wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz -P $HOME/Downloads -nc
+  #tar xf $HOME/Downloads/zig-linux-x86_64-0.13.0.tar.xz -C ~/Downloads/
+  #git clone -b 0.14.x https://github.com/ziglang/zig $HOME/Downloads/zig
+  #cd $HOME/Downloads/zig
+  #mkdir build
+  #cd build
+  #cmake ..
+  #make install
   #fi
 
   #install libre wolf
-  if ! type "librewolf" > /dev/null; then
+  if ! type "librewolf" >/dev/null; then
     sudo apt install extrepo -y && sudo extrepo enable librewolf && sudo apt update && sudo apt install librewolf -y
   fi
 
-  # install nvm
-  if ! [ -d "${HOME}/.nvm/.git" ]; then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-  fi
-
-
-  if ! type "ghostty" > /dev/null; then
+  if ! type "ghostty" >/dev/null; then
     snap install ghostty --classic --beta
   fi
   sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /snap/bin/ghostty 50
@@ -71,14 +65,13 @@ if [ $DISTRO == "Linuxmint" ]; then
   #zig build -Doptimize=ReleaseFast
 fi
 
-if ! type "anki" > /dev/null; then
-	cd ~/Downloads
-	wget -nc https://github.com/ankitects/anki/releases/download/25.07.5/anki-launcher-25.07.5-linux.tar.zst
-	tar xaf anki-launcher-25.07.5-linux.tar.zst
-	cd anki-launcher-25.07.5-linux
-	sudo ./install.sh
+if ! type "anki" >/dev/null; then
+  cd ~/Downloads
+  wget -nc https://github.com/ankitects/anki/releases/download/25.07.5/anki-launcher-25.07.5-linux.tar.zst
+  tar xaf anki-launcher-25.07.5-linux.tar.zst
+  cd anki-launcher-25.07.5-linux
+  sudo ./install.sh
 fi
-
 
 rm -rf $HOME/.local/scripts
 rm -rf $HOME/Wallpapers
@@ -93,10 +86,10 @@ rm $HOME/.p10k.zsh
 #systemctl --user stop swww.service
 #systemctl --user disable swww.service
 if [ $DISTRO == "Linuxmint" ]; then
-	if ! test -d $HOME/.config/ghostty/themes; then
-		mkdir $HOME/.config/ghostty/themes
-	fi
-	cp $HOME/.config/ghostty/themes.matugen.mint $HOME/.config/ghostty/themes/matugen
+  if ! test -d $HOME/.config/ghostty/themes; then
+    mkdir $HOME/.config/ghostty/themes
+  fi
+  cp $HOME/.config/ghostty/themes.matugen.mint $HOME/.config/ghostty/themes/matugen
 fi
 
 cp $HOME/personal/dev/.config ~/ -r

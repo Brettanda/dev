@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+nvm --version
+nvm install stable
+nvm use stable
+nvm alias default stable
