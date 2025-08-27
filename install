@@ -81,6 +81,7 @@ rm $HOME/.zshrc
 rm $HOME/.zsh_profile
 rm $HOME/.zshenv
 rm $HOME/.p10k.zsh
+rm -rf $HOME/.config/nvim
 
 #rm /etc/pulse/default.pa
 #systemctl --user stop swww.service
