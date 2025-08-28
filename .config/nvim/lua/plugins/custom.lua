@@ -3,7 +3,7 @@ local plugins = {
     "nvimtools/none-ls.nvim",
     ft = { "python" },
     opts = function()
-      return require("configs.none-ls")
+      return require("config.none-ls")
     end,
   },
   {
