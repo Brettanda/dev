@@ -1,9 +1,21 @@
 local plugins = {
   {
     "nvimtools/none-ls.nvim",
+    dependencies = {
+      "nvimtools/none-ls-extras.nvim",
+    },
     ft = { "python" },
     opts = function()
-      return require("config.none-ls")
+      --return require("config.none-ls")
+      local null_ls = require("null-ls")
+      local opts = {
+        sources = {
+          require("none-ls.formatting.ruff"),
+          require("none-ls.formatting.ruff_format"),
+          --null_ls.builtins.diagnotics.mypy,
+        },
+      }
+      return opts
     end,
   },
   {
