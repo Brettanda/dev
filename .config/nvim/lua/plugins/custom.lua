@@ -117,6 +117,9 @@ local plugins = {
   },
   {
     "williamboman/mason.nvim",
+    dependencies = {
+      --"WhoIsSethDaniel/mason-tool-installer.nvim", -- Adds functionality to automatically install non-LSP tools
+    },
     opts = {
       ensure_installed = {
         "black",
@@ -126,6 +129,17 @@ local plugins = {
         "debugpy",
       },
     },
+    --config = function()
+    --local mason_tool_installer = require("mason-tool-installer")
+
+    --mason_tool_installer.setup({
+    -- Non-LSP tools to install automatically
+    --ensure_installed = {
+    --'prettier',
+    --'isort',
+    --},
+    --})
+    --end,
   },
   {
     "neovim/nvim-lspconfig",

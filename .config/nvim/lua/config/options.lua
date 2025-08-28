@@ -15,6 +15,6 @@ opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clip
 local g = vim.g
 
 g.python3_host_prog = "~/.virtualenvs/debugpy/bin/python"
-g.autoformat = true
-g.lazyvim_python_lsp = "pyright"
+-- g.autoformat = true
+-- g.lazyvim_python_lsp = "pyright"
 -- vim.g.lazyvim_python_lsp = "ruff"
