@@ -1,5 +1,12 @@
 local plugins = {
   {
+    "nvimtools/none-ls.nvim",
+    ft = { "python" },
+    opts = function()
+      return require("configs.none-ls")
+    end,
+  },
+  {
     "rcarriga/nvim-dap-ui",
     dependencies = "mfussenegger/nvim-dap",
     config = function()
@@ -100,6 +107,9 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "black",
+        "mypy",
+        "ruff",
         "pyright",
         "debugpy",
       },
