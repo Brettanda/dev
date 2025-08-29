@@ -23,8 +23,8 @@ return {
 		local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
 		require("dap-python").setup(path)
 
-		local dap = require("dap")
-		local dapui = require("dapui")
+		--local dap = require("dap")
+		--local dapui = require("dapui")
 
 		require("mason-nvim-dap").setup({
 			-- Makes a best effort to setup the various debuggers with

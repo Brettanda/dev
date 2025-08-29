@@ -5,64 +5,13 @@ git config --global core.editor "nvim"
 DISTRO="$(lsb_release -i | cut -f 2-)"
 
 # The spaces are required?!??!?!?!??!?
+# in the if statement
 if [ $DISTRO == "Arch" ]; then
-  sudo pacman -S --noconfirm --needed nwg-look nwg-displays ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock xdg-desktop-portal-gtk xdg-desktop-portal-hyprland gnome-keyring seahorse swww cliphist brightnessctl neovim thunderbird ripgrep fd-find
-  sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-nerd-fonts-symbols ttf-cascadia-code ttf-cascadia-code-nerd adobe-source-han-sans-jp-fonts otf-ipafont noto-fonts-cjk
-  sudo pacman -S --noconfirm --needed pulseaudio pipewire-pulse wireplumber tlp
-
-  #rm -rf ~/.config/hypr
-  rm -rf ~/.config/waybar
-
-  yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg spotify spicetify-cli tlpui --noconfirm --needed
-
-  sudo chmod a+wr /opt/spotify
-  sudo chmod a+wr /opt/spotify/Apps -R
-  spicetify backup apply
-  spicetify config current_theme Brett
-  spicetify apply
+	./install-arch
 fi
 
 if [ $DISTRO == "Linuxmint" ]; then
-  sudo apt install pulseaudio rofi ripgrep fd-find -y
-
-  # fuck off, why do i need snapd for zig
-  # source https://linuxcapable.com/how-to-install-and-enable-snap-on-linux-mint/
-  # probably shouldn't have deleted the file already, b/c i can't restore it now :|
-  sudo mv /etc/apt/preferences.d/nosnap.pref /etc/apt/preferences.d/nosnap.backup
-  sudo apt update
-  sudo apt install zsh llvm liblld-dev clang libclang-dev snapd -y
-  sudo systemctl enable --now snapd.service
-  if ! [ -d "${HOME}/.fzf" ]; then
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-  fi
-  #if ! type "zig" > /dev/null; then
-  #sudo apt install -y snap
-  #sudo systemctl enable --now snapd.service
-  #snap install ghostty --classic --beta
-  #sudo apt remove snapd -y
-  #wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz -P $HOME/Downloads -nc
-  #tar xf $HOME/Downloads/zig-linux-x86_64-0.13.0.tar.xz -C ~/Downloads/
-  #git clone -b 0.14.x https://github.com/ziglang/zig $HOME/Downloads/zig
-  #cd $HOME/Downloads/zig
-  #mkdir build
-  #cd build
-  #cmake ..
-  #make install
-  #fi
-
-  #install libre wolf
-  if ! type "librewolf" >/dev/null; then
-    sudo apt install extrepo -y && sudo extrepo enable librewolf && sudo apt update && sudo apt install librewolf -y
-  fi
-
-  if ! type "ghostty" >/dev/null; then
-    snap install ghostty --classic --beta
-  fi
-  sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /snap/bin/ghostty 50
-  #git clone https://github.com/ghostty-org/ghostty $HOME/Downloads/ghostty
-  #cd $HOME/Downloads/ghostty
-  #zig build -Doptimize=ReleaseFast
+	./install-mint
 fi
 
 if ! type "anki" >/dev/null; then
