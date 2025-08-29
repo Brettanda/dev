@@ -25,61 +25,68 @@ return {
 		"leoluz/nvim-dap-go",
 	},
 	keys = {
+		{
+			"<leader>d",
+			group = "Debug",
+			desc = "Debug",
+		},
 		-- Basic debugging keymaps, feel free to change to your liking!
 		{
-			"<F5>",
+			"<leader>dc",
 			function()
 				require("dap").continue()
 			end,
-			desc = "Debug: Start/Continue",
+			desc = "Start/Continue",
 		},
 		{
-			"<F1>",
+			"<leader>di",
 			function()
 				require("dap").step_into()
 			end,
-			desc = "Debug: Step Into",
+			desc = "Step Into",
 		},
 		{
-			"<F2>",
+			"<leader>dv",
 			function()
 				require("dap").step_over()
 			end,
-			desc = "Debug: Step Over",
+			desc = "Step Over",
 		},
 		{
-			"<F3>",
+			"<leader>do",
 			function()
 				require("dap").step_out()
 			end,
-			desc = "Debug: Step Out",
-		},
-		{
-			"<leader>d",
-			group = "Debugger",
-			desc = "Debugger",
+			desc = "Step Out",
 		},
 		{
 			"<leader>db",
 			function()
 				require("dap").toggle_breakpoint()
 			end,
-			desc = "Debug: Toggle Breakpoint",
+			desc = "Toggle Breakpoint",
 		},
 		{
 			"<leader>dB",
 			function()
 				require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
 			end,
-			desc = "Debug: Set Breakpoint",
+			desc = "Set Breakpoint",
+		},
+		{
+			"<leader>dq",
+			function()
+				require("dap").terminate()
+			end,
+			desc = "Terminate debugging",
 		},
 		-- Toggle to see last session result. Without this, you can't see session output in case of unhandled exception.
 		{
-			"<F7>",
+			"<leader>du",
 			function()
 				require("dapui").toggle()
 			end,
-			desc = "Debug: See last session result.",
+			desc = "Toggle DAP UI",
 		},
 	},
 	config = function()
@@ -125,6 +132,26 @@ return {
 			},
 		})
 
+		vim.fn.sign_define("DapBreakpoint", {
+			text = "",
+			texthl = "DiagnosticSignError",
+			linehl = "",
+			numhl = "",
+		})
+
+		vim.fn.sign_define("DapBreakpointRejected", {
+			text = "", -- or "❌"
+			texthl = "DiagnosticSignError",
+			linehl = "",
+			numhl = "",
+		})
+
+		vim.fn.sign_define("DapStopped", {
+			text = "", -- or "→"
+			texthl = "DiagnosticSignWarn",
+			linehl = "Visual",
+			numhl = "DiagnosticSignWarn",
+		})
 		-- Change breakpoint icons
 		-- vim.api.nvim_set_hl(0, 'DapBreak', { fg = '#e51400' })
 		-- vim.api.nvim_set_hl(0, 'DapStop', { fg = '#ffcc00' })
