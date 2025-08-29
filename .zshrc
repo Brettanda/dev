@@ -171,3 +171,5 @@ export NVM_DIR="$HOME/.config/nvm"
 #nvm things
 source /usr/share/nvm/init-nvm.sh
 alias vim='nvim'
+
+eval "$(direnv hook zsh)"
