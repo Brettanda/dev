@@ -23,6 +23,7 @@ return {
 
 		-- Add your own debuggers here
 		"leoluz/nvim-dap-go",
+		"theHamsta/nvim-dap-virtual-text",
 	},
 	keys = {
 		{
@@ -90,6 +91,10 @@ return {
 		},
 	},
 	config = function()
+		require("nvim-dap-virtual-text").setup({
+			commented = true, -- Show virtual text alongside comment
+		})
+
 		local dap = require("dap")
 		local dapui = require("dapui")
 
@@ -107,6 +112,7 @@ return {
 			ensure_installed = {
 				-- Update this to ensure that you have the debuggers for the langs you want
 				"delve",
+				"debugpy",
 			},
 		})
 
