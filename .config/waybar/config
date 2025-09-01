@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["custom/notification","clock","custom/pacman","tray"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand","bluetooth","network","battery","hyprland/language","custom/lock","pulseaudio","backlight"],
+        "modules-right": ["group/expand","bluetooth","network","battery","custom/lock","pulseaudio","backlight"],
         "hyprland/workspaces": {
             "disable-scroll": true,
 	    "show-special": false,
