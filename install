@@ -29,6 +29,7 @@ rm $HOME/.bashrc
 rm $HOME/.zshrc
 rm $HOME/.zsh_profile
 rm $HOME/.zshenv
+rm $HOME/.xinitrc
 rm $HOME/.p10k.zsh
 rm -rf $HOME/.config/nvim
 
@@ -50,6 +51,7 @@ cp $HOME/personal/dev/.bashrc $HOME/.bashrc
 cp $HOME/personal/dev/.zshrc $HOME/.zshrc
 cp $HOME/personal/dev/.zsh_profile $HOME/.zsh_profile
 cp $HOME/personal/dev/.zshenv $HOME/.zshenv
+cp $HOME/personal/dev/.xinitrc $HOME/.xinitrc
 cp $HOME/personal/dev/.p10k.zsh $HOME/.p10k.zsh
 
 #cp $HOME/personal/dev/etc/pulse/default.pa /etc/pulse/default.pa
