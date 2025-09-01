@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["custom/notification","clock","custom/pacman","tray"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand","bluetooth","network","battery","custom/lock"],
+        "modules-right": ["group/expand","bluetooth","network","battery","hyprland/language","custom/lock","pulseaudio","backlight"],
         "hyprland/workspaces": {
             "disable-scroll": true,
 	    "show-special": false,
@@ -118,7 +118,14 @@
 	"custom/lock": {
 	    "tooltip": false,
 	    "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
-	    "format": "",
+	    "format": " ",
+	},
+	"hyprland/language" :{
+		"format":"{} ",
+		"format-en":"US",
+		"format-jp":"JP",
+		"keyboard-name":"at-translated-set-2-keyboard",
+		"on-click":"hyprctl switchxkblayout current next",
 	},
         "cpu": {
             "format": "󰻠",
@@ -135,4 +142,41 @@
             "icon-size": 14,
             "spacing": 10
         },
+	"pulseaudio": {
+        "scroll-step": 3, // %, can be a float
+        "format": "{icon} {volume}% {format_source} ",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        //"format-source": "{volume}% ",
+        //"format-source-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+        },
+        // https://github.com/chubin/wttr.in
+        "custom/weather": {
+        "exec": "curl 'https://wttr.in/krasnodar?format=2'",
+        "interval": 900,
+	    "on-click": "yad --html --uri='https://wttr.in/krasnodar' --center --fixed --width=1000 --height=680 --timeout=60 --timeout-indicator=right"
+        },
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent: >3}%",
+        "format-icons": ["", ""],
+        "on-scroll-down": "brightnessctl -c backlight set 1%-",
+        "on-scroll-up": "brightnessctl -c backlight set +1%",
+        "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
+    },
 } 
