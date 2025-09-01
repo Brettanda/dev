@@ -349,6 +349,14 @@ require("lazy").setup({
 				{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
 			},
 		},
+		layout = {
+			width = { min = 20 }, -- min and max width of the columns
+			spacing = 3, -- spacing between columns
+		},
+		keys = {
+			{ "<leader>f", group = "[F]ile" },
+			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find file", mode = "n" },
+		},
 	},
 
 	-- NOTE: Plugins can specify dependencies.
