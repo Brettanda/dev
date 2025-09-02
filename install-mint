@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt install pulseaudio rofi ripgrep fd-find -y
+sudo apt install pulseaudio ripgrep fd-find -y
 
 # fuck off, why do i need snapd for zig
 # source https://linuxcapable.com/how-to-install-and-enable-snap-on-linux-mint/
@@ -40,3 +40,11 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 #git clone https://github.com/ghostty-org/ghostty $HOME/Downloads/ghostty
 #cd $HOME/Downloads/ghostty
 #zig build -Doptimize=ReleaseFast
+
+if ! type "rofi" > /dev/null; then
+	sudo apt install rofi-dev qalc meson -y
+	git clone https://github.com/svenstaro/rofi-calc.git ~/Downloads/rofi-calc
+	pushd ~/Downloads/rofi-calc
+	meson setup build
+	meson compile -C build/
+fi
