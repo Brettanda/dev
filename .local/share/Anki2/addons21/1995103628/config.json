@@ -1,0 +1,13 @@
+{
+    "activated": true,
+    "clipboard_monitor": false,
+    "fields": [
+        "SentKanji",
+        "VocabKanji",
+        "VocabDef"
+    ],
+    "on_show_question": true,
+    "on_show_answer": false,
+    "on_select_note": true,
+    "on_editor_load_note": false
+}
