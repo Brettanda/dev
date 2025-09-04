@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt install pulseaudio ripgrep fd-find -y
+sudo apt install pulseaudio ripgrep fd-find color-picker -y
 
 # fuck off, why do i need snapd for zig
 # source https://linuxcapable.com/how-to-install-and-enable-snap-on-linux-mint/

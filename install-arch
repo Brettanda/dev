@@ -14,7 +14,7 @@ sudo pacman -S --noconfirm --needed pulseaudio pipewire-pulse wireplumber tlp
 #rm -rf ~/.config/hypr
 rm -rf ~/.config/waybar
 
-yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg spotify spicetify-cli tlpui --noconfirm --needed
+yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg spotify spicetify-cli tlpui wl-color-picker --noconfirm --needed
 
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
