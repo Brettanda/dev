@@ -2,7 +2,8 @@
 
 git config --global core.editor "nvim"
 
-DISTRO="$(lsb_release -i | cut -f 2-)"
+#DISTRO="$(lsb_release -i | cut -f 2-)"
+DISTRO="Arch"
 
 # The spaces are required?!??!?!?!??!?
 # in the if statement
