@@ -6,6 +6,7 @@
 
 # how to use:
 # Add "hdr-game-launch -- %command%" without quotations to the LAUNCH OPTIONS of any steam game that will work with HDR
+# ONLY TESTED ON ARCH
 
 PRE_COMMAND="hyprctl keyword monitor DP-1,preferred,0x0,1,bitdepth,10,cm,hdr"
 POST_COMMAND="hyprctl keyword monitor DP-1,preferred,0x0,1,bitdepth,10"
