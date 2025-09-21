@@ -28,4 +28,4 @@ sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
 spicetify backup apply
 spicetify config current_theme Brett
-spicetify apply
+spicetify update
