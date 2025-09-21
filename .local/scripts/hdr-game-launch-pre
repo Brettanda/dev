@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Launch Options:
+# hdr-game-launch-pre -- %command%; hdr-game-launch-post
+
+export ENABLE_GAMESCOPE_WSI=1
+export SDL_VIDEODRIVER=x11
+export VKD3D_DISABLE_EXTENSIONS=VK_KHR_present_wait
+
+hyprctl keyword monitor DP-1,preferred,0x0,1,bitdepth,10,cm,hdr && scb -- %command%
