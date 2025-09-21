@@ -10,7 +10,9 @@ fi
 
 sudo pacman -S --noconfirm --needed nwg-look nwg-displays ghostty hyprshot swaync libnotify hypridle zsh fzf hyprlock xdg-desktop-portal-gtk xdg-desktop-portal-hyprland gnome-keyring seahorse swww cliphist brightnessctl neovim thunderbird ripgrep fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-mozc fcitx5-qt mpv mplayer rofi rofi-calc base-devel
 sudo pacman -S --noconfirm --needed waybar ttf-font-awesome ttf-nerd-fonts-symbols ttf-cascadia-code ttf-cascadia-code-nerd adobe-source-han-sans-jp-fonts otf-ipafont noto-fonts-cjk noto-fonts-emoji pipewire pipewire-pulse pavucontrol gamescope
-sudo pacman -S --noconfirm --needed pulseaudio pipewire-pulse wireplumber tlp
+sudo pacman -S --noconfirm --needed pulseaudio pipewire-pulse wireplumber tlp archlinux-xdg-menu
+# to get the "open with application" menu to show applications
+XDG_MENU_PREFIX=arch- kbuildsycoca6
 
 #rm -rf ~/.config/hypr
 rm -rf ~/.config/waybar
@@ -22,7 +24,7 @@ if ! type "yay" >/dev/null; then
 fi
 
 
-yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg spotify spicetify-cli tlpui wl-color-picker discord 1password xwaylandvideobridge --noconfirm --needed
+yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg spotify spicetify-cli tlpui wl-color-picker discord 1password xwaylandvideobridge ark --noconfirm --needed
 
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
