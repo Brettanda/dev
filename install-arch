@@ -24,7 +24,7 @@ if ! type "yay" >/dev/null; then
 fi
 
 
-yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg spotify spicetify-cli tlpui wl-color-picker discord 1password xwaylandvideobridge ark --noconfirm --needed
+yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg spotify spicetify-cli tlpui wl-color-picker discord 1password xwaylandvideobridge ark minecraft-launcher --noconfirm --needed
 
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
