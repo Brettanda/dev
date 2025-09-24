@@ -24,6 +24,7 @@ if ! type "anki" >/dev/null; then
 fi
 
 rm -rf $HOME/.local/scripts
+rm -rf $HOME/.local/share/Anki2/addons21/
 rm -rf $HOME/Wallpapers
 rm $HOME/.bash_profile
 rm $HOME/.bashrc
@@ -47,6 +48,7 @@ fi
 cp $HOME/personal/dev/.config ~/ -r
 cp $HOME/personal/dev/Wallpapers ~/ -r
 cp $HOME/personal/dev/.local/scripts $HOME/.local/scripts -r
+cp $HOME/personal/dev/.local/share/Anki2/addons21 $HOME/.local/share/Anki2/addons21 -r
 cp $HOME/personal/dev/.bash_profile $HOME/.bash_profile
 cp $HOME/personal/dev/.bashrc $HOME/.bashrc
 cp $HOME/personal/dev/.zshrc $HOME/.zshrc
