@@ -93,6 +93,7 @@ return {
 	config = function()
 		require("nvim-dap-virtual-text").setup({
 			commented = true, -- Show virtual text alongside comment
+			virt_text_pos = "eol",
 		})
 
 		local dap = require("dap")
