@@ -94,6 +94,13 @@ return {
 		require("nvim-dap-virtual-text").setup({
 			commented = true, -- Show virtual text alongside comment
 			virt_text_pos = "eol",
+			display_callback = function(variable, bud, stackframe, node, options)
+				if options.virt_text_pos == "inline" then
+					return " = " .. variable.value
+				else
+					return variable.name .. " = " .. variable.value
+				end
+			end,
 		})
 
 		local dap = require("dap")
