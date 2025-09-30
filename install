@@ -8,11 +8,11 @@ DISTRO="Arch"
 # The spaces are required?!??!?!?!??!?
 # in the if statement
 if [ $DISTRO == "Arch" ]; then
-	./install-arch
+  ./install-arch
 fi
 
 if [ $DISTRO == "Linuxmint" ]; then
-	./install-mint
+  ./install-mint
 fi
 
 if ! type "anki" >/dev/null; then
