@@ -34,7 +34,7 @@ return {
       nls.builtins.diagnostics.alex,
       nls.builtins.diagnostics.write_good.with({
         filetypes = { "markdown", "text", "gitcommit", "python" },
-        settings = { thereIs = true },
+        -- settings = { thereIs = true },
         filter = function(diagnostic)
           -- Only keep diagnostics if they’re inside comments or docstrings
           local row = tonumber(diagnostic.row)
