@@ -7,7 +7,10 @@ return {
     opts.servers.ruff = {
       init_options = {
         settings = {
-          lineLength = 110,
+          args = {
+            "--config=~/pyproject.toml",
+          },
+          lineLength = 180,
         },
       },
     }
