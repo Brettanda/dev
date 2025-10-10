@@ -53,5 +53,19 @@ return {
     -- filetypes = { "markdown", "text", "gitcommit" },
     -- settings = {},
     -- }
+    -- opts.servers.vue_ls = {}
+    opts.servers.volar = {
+      filetypes = { "vue" },
+      init_options = {
+        vue = {
+          hybridMode = false,
+        },
+      },
+      -- settings = {
+      -- typescript = {
+
+      -- }
+      -- }
+    }
   end,
 }

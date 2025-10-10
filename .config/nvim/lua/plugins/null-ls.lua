@@ -33,17 +33,18 @@ return {
       nls.builtins.code_actions.proselint,
       nls.builtins.diagnostics.alex,
       nls.builtins.diagnostics.write_good.with({
-        filetypes = { "markdown", "text", "gitcommit", "python" },
-        -- settings = { thereIs = true },
-        filter = function(diagnostic)
-          -- Only keep diagnostics if they’re inside comments or docstrings
-          local row = tonumber(diagnostic.row)
-          if not row then
-            return false
-          end
-          local line = vim.api.nvim_buf_get_lines(0, row - 1, row, false)[1]
-          return line:match("^%s*#") or line:match('"""') or line:match("'''")
-        end,
+        filetypes = { "markdown", "text", "gitcommit" }, --, "python" },
+        --
+        -- maybe i don't want this anymore for python files
+        -- filter = function(diagnostic)
+        -- Only keep diagnostics if they’re inside comments or docstrings
+        -- local row = tonumber(diagnostic.row)
+        -- if not row then
+        -- return false
+        -- end
+        -- local line = vim.api.nvim_buf_get_lines(0, row - 1, row, false)[1]
+        -- return line:match("^%s*#") or line:match('"""') or line:match("'''")
+        -- end,
       }),
     })
     -- opts.write_good = {

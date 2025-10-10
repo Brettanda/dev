@@ -2,13 +2,31 @@
 
 git config --global core.editor "nvim"
 
-#DISTRO="$(lsb_release -i | cut -f 2-)"
-DISTRO="Arch"
+NEW=false
+DISTRO=""
+while getopts n:d: flag; do
+  case "${flag}" in
+  # this doesn't work with --distro flags only -d
+  n) NEW=true ;;
+  d) DISTRO=${OPTARG} ;;
+  esac
+done
+
+# mmm chatgpt code. hopefully this doesn't explode
+if [ -z "$DISTRO" ]; then
+  if command -v lsb_release >/dev/null 2>&1; then
+    DISTRO="$(lsb_release -i | cut -f 2-)"
+  else
+    echo "Error: No distro provided (-d flag) and 'lsb_release' command not found."
+    echo "Please install lsb_release or specify a distro manually with '-d'."
+    exit 1
+  fi
+fi
 
 # The spaces are required?!??!?!?!??!?
 # in the if statement
 if [ $DISTRO == "Arch" ]; then
-  ./install-arch
+  ./install-arch $NEW
 fi
 
 if [ $DISTRO == "Linuxmint" ]; then
