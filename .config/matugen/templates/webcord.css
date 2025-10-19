@@ -1,0 +1,14 @@
+/*
+* Css Colors
+* Generated with Matugen
+*/
+<* for name, value in colors *>
+    @define-color {{name}} {{value.default.hex}};
+<* endfor *>
+
+:root {
+  --background-gradient-app-frame: @surface !important;
+  --background-gradient-high: black;
+  --background-gradient-chat: black;
+  --custom-background-gradient-high-color: black;
+}

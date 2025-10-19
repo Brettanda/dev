@@ -61,3 +61,7 @@ output_path = '~/.config/qt6ct/colors/qt6ct-colors.conf'
 input_path = '~/.config/matugen/templates/pywalfox-colors.json'
 output_path = '~/.cache/wal/colors.json'
 post_hook = 'pywalfox update'
+
+[templates.webcord]
+input_path = '~/.config/matugen/templates/webcord.css'
+output_path = '~/.config/WebCord/Themes/mine.theme.css'
