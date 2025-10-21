@@ -29,7 +29,7 @@ if [[ $1 == true ]]; then
   makepkg -si --noconfirm --needed
 fi
 
-yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg spotify spicetify-cli tlpui wl-color-picker discord 1password xwaylandvideobridge ark minecraft-launcher shim-signed --noconfirm --needed
+yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg spotify spicetify-cli tlpui wl-color-picker discord 1password xwaylandvideobridge ark minecraft-launcher shim-signed hyprpolkitagent --noconfirm --needed
 
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
