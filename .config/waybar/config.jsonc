@@ -3,13 +3,10 @@
   "position": "bottom",
   "reload_style_on_change": true,
   "modules-left": [
-    "custom/notification",
-    "clock",
-    "custom/pacman",
-    "tray"
+    "custom/cava",
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "hyprland/workspaces",
   ],
   "modules-right": [
     "group/expand",
@@ -18,7 +15,11 @@
     "battery",
     "custom/lock",
     "pulseaudio",
-    "backlight"
+    "backlight",
+    "clock",
+    "custom/notification",
+    "custom/updates",
+    "tray",
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -40,6 +41,13 @@
     "persistent-workspaces": {
       "*": 5
     }
+  },
+  "custom/cava": {
+    "exec": "cava-waybar",
+    "format": "♪ {}",
+    "on-click-middle": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-left": "playerctl previous"
   },
   "custom/notification": {
     "tooltip": false,
@@ -103,15 +111,31 @@
       "󰁹"
     ],
   },
-  "custom/pacman": {
-    "format": "󰅢 {}",
-    "interval": 3600,
-    "exec": "updatecheck | wc -l",
-    "exec-if": "exit 0",
-    "on-click": "ghostty -e sh -c 'yay -Syu --noconfirm --needed; read'; pkill -SIGRTMIN+8 waybar",
-    "signal": 8,
-    "tooltip": false,
+  "custom/updates": {
+      "format":"{text} ",
+      "return-type":"json",
+      "interval":3600,
+      "exec":"updatecheck",
+      "exec-if":"exit 0",
+      "signal":8,
+      "tooltip":true,
+      "tooltip-format":"{tooltip}",
+      "on-click": "ghostty -e sh -c 'yay -Syu --noconfirm --needed; read'; pkill -SIGRTMIN+8 waybar",
   },
+  // "custom/pacman": {
+    // "format": "󰅢 {icon}{}",
+    // "return-type": "json",
+    // "format-icons": {
+        // "pending-updates":"󰅢 ",
+        // "updated":"",
+      // },
+    // "interval": 3600,
+    // "exec": "updatecheck",
+    // "exec-if": "exit 0",
+    // "on-click": "ghostty -e sh -c 'yay -Syu --noconfirm --needed; read'; pkill -SIGRTMIN+8 waybar",
+    // "signal": 8,
+    // "tooltip": false,
+  // },
   "custom/expand": {
     "format": "",
     "tooltip": false
