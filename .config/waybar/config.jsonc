@@ -3,7 +3,8 @@
   "position": "bottom",
   "reload_style_on_change": true,
   "modules-left": [
-    "custom/cava"
+    "custom/cava",
+    "wlr/taskbar"
     // "custom/weather",
   ],
   "modules-center": [
@@ -44,6 +45,12 @@
     "persistent-workspaces": {
       "*": 5
     }
+  },
+  "wlr/taskbar":{
+    "icon-size":14,
+    "on-click":"activate",
+    "on-click-middle":"close",
+    "on-click-right":"minimize",
   },
   "custom/cava": {
     "exec": "cava-waybar",

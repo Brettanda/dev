@@ -48,7 +48,7 @@ tooltip {
     transition: all .3s ease;
     color:@inverse_primary;
 }
-#clock, #custom-updates, #custom-pacman, #custom-notfication,#bluetooth,#network,#battery, #cpu,#disk,#memory,#temperature,#custom-updates,#custom-cava,#idle_inhibitor,#pulseaudio{
+#clock, #custom-updates, #custom-pacman, #custom-notfication,#bluetooth,#network,#battery, #cpu,#disk,#memory,#temperature,#custom-updates,#custom-cava,#idle_inhibitor,#pulseaudio,#taskbar{
   color: @primary;
 }
 #custom-notification {
@@ -172,4 +172,11 @@ tooltip {
 #tray menu separator {
     padding: 0px 5px;
     transition: all .3s ease; 
+}
+
+#taskbar button {
+  padding: 0 5px;
+}
+#taskbar button.minimized {
+  opacity: 0.5;
 }
