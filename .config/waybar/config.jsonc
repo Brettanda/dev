@@ -3,7 +3,8 @@
   "position": "bottom",
   "reload_style_on_change": true,
   "modules-left": [
-    "custom/cava",
+    "custom/cava"
+    // "custom/weather",
   ],
   "modules-center": [
     "hyprland/workspaces",
@@ -13,13 +14,15 @@
     "bluetooth",
     "network",
     "battery",
-    "custom/lock",
+    "power-profiles-daemon",
+    // "custom/lock",
+    "idle_inhibitor",
     "pulseaudio",
     "backlight",
+    "tray",
+    "custom/updates",
     "clock",
     "custom/notification",
-    "custom/updates",
-    "tray",
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -49,6 +52,26 @@
     "on-click-right": "playerctl next",
     "on-click-left": "playerctl previous"
   },
+  "idle_inhibitor": {
+    "format": "{icon} ",
+    "tooltip-format-activated": "Idle Inhibitor is active",
+    "tooltip-format-deactivated": "Idle Inhibitor is not active",
+    "format-icons": {
+      "activated": "󰔡",
+      "deactivated": "󰔢"
+    }
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "<span color='#B37F34'><small></small></span>",
+      "balanced": "<span><small> </small></span>",
+      "power-saver": "<span color='#a6e3a1'><small></small></span>"
+    }
+  },
   "custom/notification": {
     "tooltip": false,
     "format": "",
@@ -56,8 +79,8 @@
     "escape": true
   },
   "clock": {
-    "format": "{:%I:%M %p} ",
-    "interval": 1,
+    "format": "{:%I:%M %p}",
+    "interval": 60,
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "format": {
@@ -153,21 +176,22 @@
     },
     "modules": [
       "custom/expand",
-      "custom/colorpicker",
+      // "custom/colorpicker",
       "cpu",
       "memory",
       "temperature",
-      "custom/endpoint"
+      "disk",
+      "custom/endpoint",
     ],
   },
-  "custom/colorpicker": {
-    "format": "{}",
-    "return-type": "json",
-    "interval": "once",
-    "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
-    "on-click": "~/.config/waybar/scripts/colorpicker.sh",
-    "signal": 1
-  },
+  // "custom/colorpicker": {
+    // "format": "{}",
+    // "return-type": "json",
+    // "interval": "once",
+    // "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
+    // "on-click": "~/.config/waybar/scripts/colorpicker.sh",
+    // "signal": 1
+  // },
   "custom/lock": {
     "tooltip": false,
     "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
@@ -184,6 +208,9 @@
     "format": "󰻠",
     "tooltip": true
   },
+  "disk":{
+    "format":"⛁",
+  },
   "memory": {
     "format": ""
   },
@@ -197,7 +224,8 @@
   },
   "pulseaudio": {
     "scroll-step": 3, // %, can be a float
-    "format": "{icon} {volume}% {format_source} ",
+    // "format": "{icon} {volume}% {format_source} ",
+    "format": "{icon} {format_source} ",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",

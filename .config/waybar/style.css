@@ -44,24 +44,24 @@ tooltip {
     background:@background;
     color: @on-background;
 }
-#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
+#clock:hover, #custom-updates:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#disk:hover,#memory:hover,#temperature:hover,#pulseaudio:hover{
     transition: all .3s ease;
     color:@inverse_primary;
+}
+#clock, #custom-updates, #custom-pacman, #custom-notfication,#bluetooth,#network,#battery, #cpu,#disk,#memory,#temperature,#custom-updates,#custom-cava,#idle_inhibitor,#pulseaudio{
+  color: @primary;
 }
 #custom-notification {
     padding: 0px 5px;
     transition: all .3s ease;
-    color: @primary;
 }
 #clock{
     padding: 0px 5px;
     transition: all .3s ease;
-    color: @primary;
 }
-#custom-pacman{
+#custom-pacman,#custom-updates{
     padding: 0px 5px;
     transition: all .3s ease;
-    color: @primary;
 }
 #workspaces {
     padding: 0px 5px;
@@ -104,18 +104,15 @@ tooltip {
 #bluetooth{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@primary;
 }
 #network{
     min-width: 0;
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@primary;
 }
 #battery{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@primary;
 }
 #battery.charging {
     color: #26A65B;
