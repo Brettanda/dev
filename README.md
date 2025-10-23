@@ -1,13 +1,14 @@
-#welcome
+# Brett's dot files
+
+![Desktop pic](/desktop.png)
 
 ## Installing steam
 
 Follow these instructions [https://wiki.archlinux.org/title/Official_repositories#multilib](https://wiki.archlinux.org/title/Official_repositories#multilib) and [https://wiki.archlinux.org/title/Steam](https://wiki.archlinux.org/title/Steam)
 
+## Todo
 
-## TODO
-
-[x] Add lazyvim back and try that again
+- [x] Add LazyVim back and try that again
 
 ## if someone actually decides to install this
 
