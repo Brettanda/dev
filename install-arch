@@ -30,6 +30,10 @@ if [[ $1 == true ]]; then
 fi
 
 yay -S visual-studio-code-bin matugen-bin aurutils pacman-contrib python-pywal python-pywalfox swayimg spotify spicetify-cli tlpui wl-color-picker discord 1password xwaylandvideobridge ark minecraft-launcher shim-signed hyprpolkitagent hyprpicker --noconfirm --needed
+# install stuff for https://github.com/GNOME/gnome-network-displays
+# TODO: something about the install may not work by default. im not sure what i did to get it working.
+# The dummy display just didn't work for me.
+yay -S gnome-network-displays ffmpeg dnsmasq xdg-desktop-portal-gnome gst-plugins-good gst-plugin-pipewire libva-mesa-driver gstreamer-vaapi faac wpa_suppliecant openh264 --noconfirm --needed
 
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
