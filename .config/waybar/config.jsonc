@@ -1,14 +1,14 @@
 {
   "position": "bottom",
-  "mode":"dock",
+  "mode": "dock",
   "reload_style_on_change": true,
   "modules-left": [
-    "custom/cava",
+    "custom/cava"
     // "wlr/taskbar"
     // "custom/weather",
   ],
   "modules-center": [
-    "hyprland/workspaces",
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "group/expand",
@@ -23,7 +23,7 @@
     "tray",
     "custom/updates",
     "clock",
-    "custom/notification",
+    "custom/notification"
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -46,11 +46,11 @@
       "*": 5
     }
   },
-  "wlr/taskbar":{
-    "icon-size":14,
-    "on-click":"activate",
-    "on-click-middle":"close",
-    "on-click-right":"minimize",
+  "wlr/taskbar": {
+    "icon-size": 14,
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "on-click-right": "minimize"
   },
   "custom/cava": {
     "exec": "cava-waybar",
@@ -118,7 +118,7 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
-    "on-click-right": "blueberry",
+    "on-click-right": "blueberry"
   },
   "battery": {
     "interval": 30,
@@ -139,32 +139,32 @@
       "󰂀",
       "󰂂",
       "󰁹"
-    ],
+    ]
   },
   "custom/updates": {
-      "format":"{text} ",
-      "return-type":"json",
-      "interval":3600,
-      "exec":"updatecheck",
-      "exec-if":"exit 0",
-      "signal":8,
-      "tooltip":true,
-      "tooltip-format":"{tooltip}",
-      "on-click": "ghostty -e sh -c 'yay -Syu --noconfirm --needed; read'; pkill -SIGRTMIN+8 waybar",
+    "format": "{text} ",
+    "return-type": "json",
+    "interval": 3600,
+    "exec": "updatecheck",
+    "exec-if": "exit 0",
+    "signal": 8,
+    "tooltip": true,
+    "tooltip-format": "{tooltip}",
+    "on-click": "ghostty -e sh -c 'yay -Syu --noconfirm --needed; read'; pkill -SIGRTMIN+8 waybar"
   },
   // "custom/pacman": {
-    // "format": "󰅢 {icon}{}",
-    // "return-type": "json",
-    // "format-icons": {
-        // "pending-updates":"󰅢 ",
-        // "updated":"",
-      // },
-    // "interval": 3600,
-    // "exec": "updatecheck",
-    // "exec-if": "exit 0",
-    // "on-click": "ghostty -e sh -c 'yay -Syu --noconfirm --needed; read'; pkill -SIGRTMIN+8 waybar",
-    // "signal": 8,
-    // "tooltip": false,
+  // "format": "󰅢 {icon}{}",
+  // "return-type": "json",
+  // "format-icons": {
+  // "pending-updates":"󰅢 ",
+  // "updated":"",
+  // },
+  // "interval": 3600,
+  // "exec": "updatecheck",
+  // "exec-if": "exit 0",
+  // "on-click": "ghostty -e sh -c 'yay -Syu --noconfirm --needed; read'; pkill -SIGRTMIN+8 waybar",
+  // "signal": 8,
+  // "tooltip": false,
   // },
   "custom/expand": {
     "format": "",
@@ -188,42 +188,42 @@
       "memory",
       "temperature",
       "disk",
-      "custom/endpoint",
-    ],
+      "custom/endpoint"
+    ]
   },
   // "custom/colorpicker": {
-    // "format": "{}",
-    // "return-type": "json",
-    // "interval": "once",
-    // "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
-    // "on-click": "~/.config/waybar/scripts/colorpicker.sh",
-    // "signal": 1
+  // "format": "{}",
+  // "return-type": "json",
+  // "interval": "once",
+  // "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
+  // "on-click": "~/.config/waybar/scripts/colorpicker.sh",
+  // "signal": 1
   // },
   "custom/lock": {
     "tooltip": false,
     "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
-    "format": " ",
+    "format": " "
   },
   "hyprland/language": {
     "format": "{} ",
     "format-en": "US",
     "format-jp": "JP",
     "keyboard-name": "at-translated-set-2-keyboard",
-    "on-click": "hyprctl switchxkblayout current next",
+    "on-click": "hyprctl switchxkblayout current next"
   },
   "cpu": {
     "format": "󰻠",
     "tooltip": true
   },
-  "disk":{
-    "format":"⛁",
+  "disk": {
+    "format": "⛁"
   },
   "memory": {
     "format": ""
   },
   "temperature": {
     "critical-threshold": 80,
-    "format": "",
+    "format": ""
   },
   "tray": {
     "icon-size": 14,
@@ -262,16 +262,15 @@
     "interval": 900,
     "on-click": "yad --html --uri='https://wttr.in/krasnodar' --center --fixed --width=1000 --height=680 --timeout=60 --timeout-indicator=right"
   },
-},
-"backlight": {
-  // "device": "acpi_video1",
-  "format": "{icon} {percent: >3}%",
-  "format-icons": [
-    "",
-    ""
-  ],
-  "on-scroll-down": "brightnessctl -c backlight set 1%-",
-  "on-scroll-up": "brightnessctl -c backlight set +1%",
-  "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
-},
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon} {percent: >3}%",
+    "format-icons": [
+      "",
+      ""
+    ],
+    "on-scroll-down": "brightnessctl -c backlight set 1%-",
+    "on-scroll-up": "brightnessctl -c backlight set +1%",
+    "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
+  }
 }

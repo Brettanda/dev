@@ -10,7 +10,7 @@ return {
       "alex",
       "vue-language-server",
       "typescript-language-server",
-      "prettier",
+      "prettierd",
       -- "dot-language-server",
       -- "null-ls",
     },

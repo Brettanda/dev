@@ -23,155 +23,185 @@
 @define-color color15 #ebe3e1;
 */
 
-
 * {
-    font-size:15px;
-    font-family: "CaskaydiaCove Nerd Font Propo", "Cascadia Code NF", "CodeNewRoman Nerd Font Propo", sans-serif;
+  font-size: 15px;
+  font-family:
+    "CaskaydiaCove Nerd Font Propo", "Cascadia Code NF",
+    "CodeNewRoman Nerd Font Propo", sans-serif;
 }
 window#waybar {
-    all:unset;
+  all: unset;
 }
 .modules-left,
 .modules-center,
-.modules-right{
-    padding:5px;
-    margin:3px;
-    border-radius:8px;
-    background: alpha(@background,.9);
-    /* box-shadow: 0px 0px 2px rgba(0, 0, 0, .6); */
+.modules-right {
+  padding: 5px;
+  margin: 3px;
+  border-radius: 8px;
+  background: alpha(@background, 0.9);
+  /* box-shadow: 0px 0px 2px rgba(0, 0, 0, .6); */
 }
 tooltip {
-    background:@background;
-    color: @on-background;
+  background: @background;
+  color: @on-background;
 }
-#clock:hover, #custom-updates:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#disk:hover,#memory:hover,#temperature:hover,#pulseaudio:hover{
-    transition: all .3s ease;
-    color:@inverse_primary;
+#clock:hover,
+#custom-updates:hover,
+#custom-pacman:hover,
+#custom-notification:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#cpu:hover,
+#disk:hover,
+#memory:hover,
+#temperature:hover,
+#pulseaudio:hover {
+  transition: all 0.3s ease;
+  color: @inverse_primary;
 }
-#clock, #custom-updates, #custom-pacman, #custom-notfication,#bluetooth,#network,#battery, #cpu,#disk,#memory,#temperature,#custom-updates,#custom-cava,#idle_inhibitor,#pulseaudio,#taskbar{
+#clock,
+#custom-updates,
+#custom-pacman,
+#custom-notfication,
+#bluetooth,
+#network,
+#battery,
+#cpu,
+#disk,
+#memory,
+#temperature,
+#custom-updates,
+#custom-cava,
+#idle_inhibitor,
+#pulseaudio,
+#taskbar {
   color: @primary;
 }
 #custom-notification {
-    padding: 0px 5px;
-    transition: all .3s ease;
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
-#clock{
-    padding: 0px 5px;
-    transition: all .3s ease;
+#clock {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
-#custom-pacman,#custom-updates{
-    padding: 0px 5px;
-    transition: all .3s ease;
+#custom-pacman,
+#custom-updates {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
 #workspaces {
-    padding: 0px 5px;
+  padding: 0px 5px;
 }
 #workspaces button {
-    font-size:20px;
-    all:unset;
-    padding: 0px 5px;
-    color: #f00;
-    color: alpha(@primary,.3);
-    transition: all .2s ease;
+  font-size: 20px;
+  all: unset;
+  padding: 0px 5px;
+  color: #f00;
+  color: alpha(@primary, 0.3);
+  transition: all 0.2s ease;
 }
 #workspaces button:hover {
-    color:rgba(0,0,0,0);
-    border: none;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
-    transition: all 1s ease;
+  color: rgba(0, 0, 0, 0);
+  border: none;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.5);
+  transition: all 1s ease;
 }
 #workspaces button.active {
-    color: @primary;
-    border: none;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+  color: @primary;
+  border: none;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 #workspaces button.empty {
-    color: rgba(0,0,0,0);
-    border: none;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+  color: rgba(0, 0, 0, 0);
+  border: none;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.2);
 }
 #workspaces button.empty:hover {
-    color: rgba(0,0,0,0);
-    border: none;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
-    transition: all 1s ease;
+  color: rgba(0, 0, 0, 0);
+  border: none;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.5);
+  transition: all 1s ease;
 }
 #workspaces button.empty.active {
-    color: @primary;
-    border: none;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+  color: @primary;
+  border: none;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
-#bluetooth{
-    padding: 0px 5px;
-    transition: all .3s ease;
+#bluetooth {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
-#network{
-    min-width: 0;
-    padding: 0px 5px;
-    transition: all .3s ease;
+#network {
+  min-width: 0;
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
-#battery{
-    padding: 0px 5px;
-    transition: all .3s ease;
+#battery {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
 #battery.charging {
-    color: #26A65B;
+  color: #26a65b;
 }
 
 #battery.warning:not(.charging) {
-    color: #ffbe61;
+  color: #ffbe61;
 }
 
 #battery.critical:not(.charging) {
-    color: #f53c3c;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 #custom-lock {
-    color:@primary;
+  color: @primary;
 }
-#group-expand{
-    padding: 0px 5px;
-    transition: all .3s ease; 
+#group-expand {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
-#custom-expand{
-    padding: 0px 5px;
-    color:alpha(@primary,.2);
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
-    transition: all .3s ease; 
+#custom-expand {
+  padding: 0px 5px;
+  color: alpha(@primary, 0.2);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
 }
-#custom-expand:hover{
-    color:rgba(255,255,255,.2);
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
+#custom-expand:hover {
+  color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
 }
-#custom-colorpicker{
-    padding: 0px 5px;
+#custom-colorpicker {
+  padding: 0px 5px;
 }
-#cpu,#memory,#temperature{
-    font-size: 20px;
-    padding: 0px 5px;
-    transition: all .3s ease; 
-    color:@primary;
+#cpu,
+#memory,
+#temperature {
+  font-size: 20px;
+  padding: 0px 5px;
+  transition: all 0.3s ease;
+  color: @primary;
 }
-#custom-endpoint{
-    color:transparent;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
+#custom-endpoint {
+  color: transparent;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
 }
-#tray{
-    padding: 0px 5px;
-    transition: all .3s ease; 
+#tray {
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
 #tray menu * {
-    padding: 0px 5px;
-    transition: all .3s ease; 
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
 
 #tray menu separator {
-    padding: 0px 5px;
-    transition: all .3s ease; 
+  padding: 0px 5px;
+  transition: all 0.3s ease;
 }
 
 #taskbar button {

@@ -32,6 +32,18 @@ return {
       nls.builtins.diagnostics.proselint,
       nls.builtins.code_actions.proselint,
       nls.builtins.diagnostics.alex,
+      nls.builtins.diagnostics.prettierd,
+      nls.builtins.formatting.prettierd.with({
+        extra_filetypes = { "svelte", "vue" },
+        extra_args = function(params)
+          return params.options
+            and params.options.tabSize
+            and {
+              "--tab-width",
+              params.options.tabSize,
+            }
+        end,
+      }),
       nls.builtins.diagnostics.write_good.with({
         filetypes = { "markdown", "text", "gitcommit" }, --, "python" },
         --

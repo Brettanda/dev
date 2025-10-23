@@ -30,7 +30,7 @@ return {
     }
 
     opts.servers.jsonls = {
-      filetypes = { "json" },
+      filetypes = { "json", "jsonc", "jsonl" },
       settings = {
         json = {
           format = {
