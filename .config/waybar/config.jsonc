@@ -54,10 +54,10 @@
   },
   "custom/cava": {
     "exec": "cava-waybar",
-    "format": "♪ {}",
-    "on-click-middle": "playerctl play-pause",
-    "on-click-right": "playerctl next",
-    "on-click-left": "playerctl previous"
+    "format": "♪ {}"
+    // "on-click-middle": "playerctl play-pause",
+    // "on-click-right": "playerctl next",
+    // "on-click-left": "playerctl previous"
   },
   "idle_inhibitor": {
     "format": "{icon} ",
@@ -216,7 +216,7 @@
     "tooltip": true
   },
   "disk": {
-    "format": "🖪"
+    "format": ""
   },
   "memory": {
     "format": ""
