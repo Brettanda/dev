@@ -67,5 +67,7 @@ return {
       -- }
       -- }
     }
+
+    opts.servers.tailwindcss = {}
   end,
 }
