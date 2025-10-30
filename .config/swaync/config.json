@@ -1,24 +1,21 @@
 {
   "$schema": "/etc/xdg/swaync/configSchema.json",
-  "positionX": "center",
-  "positionY": "top",
+  "positionX": "right",
+  "positionY": "bottom",
   "cssPriority": "user",
   "control-center-width": 400,
-  "control-center-height": 860, 
+  "control-center-height": 860,
   "control-center-margin-top": 2,
   "control-center-margin-bottom": 2,
   "control-center-margin-right": 1,
   "control-center-margin-left": 0,
-
   "notification-window-width": 400,
   "notification-icon-size": 48,
   "notification-body-image-height": 160,
   "notification-body-image-width": 200,
-
-  "timeout": 10,
-  "timeout-low": 5,
-  "timeout-critical": 15,
-  
+  "timeout": 20,
+  "timeout-low": 10,
+  "timeout-critical": 30,
   "fit-to-screen": false,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
@@ -84,7 +81,7 @@
         {
           "label": "󰍭",
           "command": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-	  "type": "toggle"
+          "type": "toggle"
         },
         {
           "label": "󰤨",
@@ -98,27 +95,27 @@
           "label": "",
           "command": "nwg-look"
         },
-        { 
+        {
           "label": "󰻂",
           "command": "obs"
         },
-	{
-	  "label": "󰌾",
-	  "command": "hyprlock"
-	},
-	{
-	  "label":"󰜉",
-	  "command": "reboot"
-	},
-	{
-	  "label":"󰐥",
-	  "command": "shutdown now"
-	},
-	{
-	  "label":"󰀝",
-	  "command": "bash -c $HOME/.config/hypr/scripts/airplaneMode.sh",
-	  "type": "toggle"
-	}
+        {
+          "label": "󰌾",
+          "command": "hyprlock"
+        },
+        {
+          "label": "󰜉",
+          "command": "reboot"
+        },
+        {
+          "label": "󰐥",
+          "command": "shutdown now"
+        },
+        {
+          "label": "󰀝",
+          "command": "bash -c $HOME/.config/hypr/scripts/airplaneMode.sh",
+          "type": "toggle"
+        }
       ]
     }
   }
