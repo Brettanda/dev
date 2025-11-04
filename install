@@ -44,6 +44,8 @@ fi
 rm -rf $HOME/.local/scripts
 rm -rf $HOME/.local/share/Anki2/addons21/
 rm -rf $HOME/Wallpapers
+# rm $HOME/.local/share/applications/CurseForge.desktop
+# rm -rf $HOME/.local/share/icons
 rm $HOME/.bash_profile
 rm $HOME/.bashrc
 rm $HOME/.zshrc
@@ -67,6 +69,8 @@ cp $HOME/personal/dev/.config ~/ -r
 cp $HOME/personal/dev/Wallpapers ~/ -r
 cp $HOME/personal/dev/.local/scripts $HOME/.local/scripts -r
 cp $HOME/personal/dev/.local/share/Anki2/addons21 $HOME/.local/share/Anki2/addons21 -r
+cp $HOME/personal/dev/.local/share/applications $HOME/.local/share/ -r
+cp $HOME/personal/dev/.local/share/icons $HOME/.local/share -r
 cp $HOME/personal/dev/.bash_profile $HOME/.bash_profile
 cp $HOME/personal/dev/.bashrc $HOME/.bashrc
 cp $HOME/personal/dev/.zshrc $HOME/.zshrc
