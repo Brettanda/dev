@@ -1,3 +1,7 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
-	url = git@github.com:Brettanda/vim.git
+	url = git@github.com:Brettanda/nvim.git
+
+[submodule "personal"]
+  path = personal
+  url = git@github.com:Brettanda/dev-personal.git
