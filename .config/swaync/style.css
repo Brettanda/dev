@@ -1,0 +1,20 @@
+@import "colors.css";
+
+*{
+  font-family: "Caskaydia Cove Nerd Font Propo";
+  font-size: 14px;
+  font-weight: normal;
+}
+.blank-window {
+  background:transparent;
+}
+.floating-notifications {
+  background: transparent;
+}
+.widgets,.notification-default-action {
+  background-color: alpha(@surface,0.9);
+}
+.notification-default-action {
+  border-width: 2px;
+  border-color: @primary;
+}

@@ -3,10 +3,3 @@
 @define-color {{name}} {{value.default.hex}};
 <* endfor *>
 
-.widgets,.notification-default-action {
-  background-color: alpha(@surface,0.9);
-}
-.notification-default-action {
-  border-width: 2px;
-  border-color: @primary;
-}
