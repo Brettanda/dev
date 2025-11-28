@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# Ask for the parent folder
+read -rp "Enter the path to the parent folder: " PARENT
+
+# Remove trailing slash if present
+PARENT="${PARENT%/}"
+
+# Check the folder exists
+if [[ ! -d "$PARENT" ]]; then
+    echo "Error: '$PARENT' is not a valid directory."
+    exit 1
+fi
+
+# Loop through subfolders
+for dir in "$PARENT"/*/; do
+    # If not a directory, skip
+    [[ -d "$dir" ]] || continue
+
+    # Extract folder name (basename)
+    name=$(basename "$dir")
+
+    # Create zip name
+    zipname="${PARENT}/${name}.zip"
+
+    echo "Creating: $zipname"
+
+    # Zip only the contents, not the folder itself
+    (cd "$dir" && zip -r "$zipname" ./* >/dev/null)
+done
+
+echo "Done!"
