@@ -40,5 +40,3 @@ sudo chmod a+wr /opt/spotify/Apps -R
 spicetify backup apply
 spicetify config current_theme Brett
 spicetify update
-systemctl --user enable hypridle.service
-systemctl --user start hypridle.service
