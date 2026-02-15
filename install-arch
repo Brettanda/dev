@@ -40,3 +40,6 @@ sudo chmod a+wr /opt/spotify/Apps -R
 spicetify backup apply
 spicetify config current_theme Brett
 spicetify update
+# view the logs for the below command with
+# journalctl -f -b | grep -i lock
+systemctl --user restart hypridle.service
