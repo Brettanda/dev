@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # executioner() {
-kill -SIGTERM $(pgrep -f 'upc.exe')
+# kill -SIGTERM $(pgrep -f 'upc.exe')
 # }
 # trap executioner EXIT
 # eval "$command"
@@ -39,3 +39,32 @@ kill -SIGTERM $(pgrep -f 'upc.exe')
 # on_run $GAME $PROCESSES
 # fi
 # done
+
+# Ensure Proton override is set
+export WINEDLLOVERRIDES="dinput8=n,b"
+
+(
+  echo "Watcher started..."
+
+  # Give the game time to fully boot (important for Ubisoft)
+  sleep 30
+
+  # Wait while BOTH the game thread and Ubisoft are running
+  while pgrep -x "MainThread" >/dev/null && pgrep -f "upc.exe" >/dev/null; do
+    sleep 2
+  done
+
+  echo "Game exited or MainThread gone, killing Ubisoft..."
+
+  # If Ubisoft is still alive, kill it
+  if pgrep -f "upc.exe" >/dev/null; then
+    pkill -f "upc.exe"
+    pkill -f "UplayWebCore.exe"
+    pkill -f "UbisoftGameLauncher.exe"
+  fi
+
+  echo "Cleanup done."
+) &
+
+# Hand control back to Steam immediately
+exec "$@"
