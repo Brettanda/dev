@@ -1,9 +1,10 @@
-#[config]
+[config]
+fallback_color = "#ffbf9b"
+prefer = "closest-to-fallback"
 #reload_apps = true
 
 [config.wallpaper]
-command = "swww"
-arguments = ["img", "--transition-type", "any"]
+command = "awww img --transition-type any {{ image }}"
 set = true
 
 [templates.hyprland]

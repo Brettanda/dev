@@ -1,27 +1,24 @@
 #!/usr/bin/env bash
 
-if pidof rofi > /dev/null; then
-    pkill rofi
+if pidof rofi >/dev/null; then
+  pkill rofi
 fi
 
 wallpapers_dir="$HOME/Wallpapers"
 
 selected_wallpaper=$(for a in "$wallpapers_dir"/*; do
-    echo -en "$(basename "${a%.*}")\0icon\x1f$a\n"
+  echo -en "$(basename "${a%.*}")\0icon\x1f$a\n"
 done | rofi -dmenu -theme wallpaperselect.rasi -p " ")
 #done | rofi -dmenu -theme wallpaperselect.rasi -p " ")
-
-
 
 #pkill rofi || true && rofi -show drun -theme ${style_dir}/${style_theme}.rasi
 
 image_fullname_path=$(find "$wallpapers_dir" -type f -name "$selected_wallpaper.*" | head -n 1)
 
 #swww img "$image_fullname_path" --transition-type any --transition-duration 2
-matugen image "$image_fullname_path"
+matugen image "$image_fullname_path" -m "dark"
 
 #~/.config/viegphunt/wallpaper_effects.sh
 ln -sf "$image_fullname_path" "$HOME/.config/hypr/current_wallpaper"
-
 
 # Maybe implement this at some point https://github.com/Abhra00/Matuprland/blob/main/hypr/scripts/wallSelect.sh

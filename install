@@ -56,8 +56,8 @@ rm $HOME/.p10k.zsh
 rm -rf $HOME/.config/nvim
 
 #rm /etc/pulse/default.pa
-#systemctl --user stop swww.service
-#systemctl --user disable swww.service
+#systemctl --user stop awww.service
+#systemctl --user disable awww.service
 if [ $DISTRO == "Linuxmint" ]; then
   if ! test -d $HOME/.config/ghostty/themes; then
     mkdir $HOME/.config/ghostty/themes
@@ -80,8 +80,8 @@ cp $HOME/personal/dev/.xinitrc $HOME/.xinitrc
 cp $HOME/personal/dev/.p10k.zsh $HOME/.p10k.zsh
 
 #cp $HOME/personal/dev/etc/pulse/default.pa /etc/pulse/default.pa
-#systemctl --user enable swww.service
-#systemctl --user start swww.service
+#systemctl --user enable awww.service
+#systemctl --user start awww.service
 
 if [ $DISTRO == "Arch" ]; then
   hyprctl reload
