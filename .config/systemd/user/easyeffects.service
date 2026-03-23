@@ -1,0 +1,21 @@
+[Unit]
+Description=EasyEffects Daemon
+Requires=pipewire.service
+After=pipewire.service
+PartOf=pipewire.service
+
+[Service]
+Type=simple
+# Standard Arch package command
+ExecStart=/usr/bin/easyeffects --hide-window --service-mode
+
+# Restart rules in case it still manages to crash
+Restart=on-failure
+RestartSec=5
+
+# The priority magic
+Nice=-10
+OOMScoreAdjust=-500
+
+[Install]
+WantedBy=default.target

@@ -44,6 +44,9 @@ spicetify update
 # journalctl -f -b | grep -i lock
 systemctl --user restart hypridle.service
 systemctl --user restart gamemoded.service
+# not sure i need to restart this lol
+# systemctl --user restart easyeffects.service
+systemctl --user restart rtkit-daemon.service
 # sets dolphin as the default file manager for apps that just try to open a random terminal
 xdg-mime default org.kde.dolphin.desktop inode/directory
 # this fixes gamemode not being able to set the cpu scaling to perfomance

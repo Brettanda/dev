@@ -17,3 +17,15 @@ After running the ./install file, make sure to change the background with `Ctrl+
 ## Installing Battle.net in lutris
 
 Just install it through the EXE and set it to use proton 10.6+ (Staging) if you get the "Agent is sleeping" error. https://github.com/lutris/docs/issues/189
+
+## Steam arguments
+
+### Trackmania
+
+uplay-killer gamemoderun gamescope -f -w 2560 -h 1440 -r 144 -- %command%
+
+### Elden Ring Nightreign
+
+<!-- hdr-game-launch-gem gamemoderun gamescope -f -w 2560 -h 1440 -r 144 --hdr-enabled -- %command% -->
+hdr doesn't work in this game, its just washed out. WHY
+gamemoderun gamescope -f -w 2560 -h 1440 -r 144 -- %command%
