@@ -27,5 +27,4 @@ uplay-killer gamemoderun gamescope -f -w 2560 -h 1440 -r 144 -- %command%
 ### Elden Ring Nightreign
 
 <!-- hdr-game-launch-gem gamemoderun gamescope -f -w 2560 -h 1440 -r 144 --hdr-enabled -- %command% -->
-hdr doesn't work in this game, its just washed out. WHY
-gamemoderun gamescope -f -w 2560 -h 1440 -r 144 -- %command%
+hdr-game-launch gamemoderun gamescope -f -w 2560 -h 1440 -r 144 --hdr-enabled -- %command%
